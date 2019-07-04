@@ -7,5 +7,7 @@ target 'TravelPlanner' do
 
   # Pods for TravelPlanner
   pod 'Pulley'
+  pod 'GoogleMaps'
+  pod 'GooglePlaces'
 
 end

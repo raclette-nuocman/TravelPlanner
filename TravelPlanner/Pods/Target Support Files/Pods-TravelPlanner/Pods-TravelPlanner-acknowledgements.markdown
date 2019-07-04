@@ -1,6 +1,14 @@
 # Acknowledgements
 This application makes use of the following third party libraries:
 
+## GoogleMaps
+
+Copyright 2019 Google
+
+## GooglePlaces
+
+Copyright 2019 Google
+
 ## Pulley
 
 Copyright (c) 2016 Brendan Lee <brendan@52inc.com>
