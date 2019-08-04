@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F20739722F6F40F00BC7383 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F20739622F6F40F00BC7383 /* Config.swift */; };
+		0F20739A22F7073A00BC7383 /* config.json in Resources */ = {isa = PBXBuildFile; fileRef = 0F20739922F7073A00BC7383 /* config.json */; };
 		0FCFC55822C145230082B924 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCFC55722C145230082B924 /* AppDelegate.swift */; };
 		0FCFC55A22C145230082B924 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCFC55922C145230082B924 /* ViewController.swift */; };
 		0FCFC55D22C145230082B924 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FCFC55B22C145230082B924 /* Main.storyboard */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F20739622F6F40F00BC7383 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		0F20739922F7073A00BC7383 /* config.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = config.json; sourceTree = "<group>"; };
 		0FCFC55422C145230082B924 /* TravelPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FCFC55722C145230082B924 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0FCFC55922C145230082B924 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -40,6 +44,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F20739822F7071200BC7383 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				0F20739622F6F40F00BC7383 /* Config.swift */,
+				0F20739922F7073A00BC7383 /* config.json */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
 		0FCFC54B22C145230082B924 = {
 			isa = PBXGroup;
 			children = (
@@ -61,6 +74,7 @@
 		0FCFC55622C145230082B924 /* TravelPlanner */ = {
 			isa = PBXGroup;
 			children = (
+				0F20739822F7071200BC7383 /* Config */,
 				0FCFC55722C145230082B924 /* AppDelegate.swift */,
 				0FCFC55922C145230082B924 /* ViewController.swift */,
 				0FCFC55B22C145230082B924 /* Main.storyboard */,
@@ -150,6 +164,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0FCFC56222C145230082B924 /* LaunchScreen.storyboard in Resources */,
+				0F20739A22F7073A00BC7383 /* config.json in Resources */,
 				0FCFC55F22C145230082B924 /* Assets.xcassets in Resources */,
 				0FCFC55D22C145230082B924 /* Main.storyboard in Resources */,
 			);
@@ -223,6 +238,7 @@
 			files = (
 				0FCFC55A22C145230082B924 /* ViewController.swift in Sources */,
 				0FCFC55822C145230082B924 /* AppDelegate.swift in Sources */,
+				0F20739722F6F40F00BC7383 /* Config.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
