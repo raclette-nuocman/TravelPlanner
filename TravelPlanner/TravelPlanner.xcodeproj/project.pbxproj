@@ -11,6 +11,11 @@
 		0F20739A22F7073A00BC7383 /* config.json in Resources */ = {isa = PBXBuildFile; fileRef = 0F20739922F7073A00BC7383 /* config.json */; };
 		0F76EB51232A706C00E0DFDB /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F76EB50232A706C00E0DFDB /* Map.storyboard */; };
 		0F76EB53232A716900E0DFDB /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F76EB52232A716900E0DFDB /* RootViewController.swift */; };
+		0F76EB55232A7D9A00E0DFDB /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F76EB54232A7D9A00E0DFDB /* MainCoordinator.swift */; };
+		0F76EB57232A7E5100E0DFDB /* PulleyManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F76EB56232A7E5100E0DFDB /* PulleyManagerViewController.swift */; };
+		0F76EB59232A7EC800E0DFDB /* Pulley.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F76EB58232A7EC800E0DFDB /* Pulley.storyboard */; };
+		0F76EB5C232A7F6D00E0DFDB /* DrawerContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F76EB5B232A7F6D00E0DFDB /* DrawerContainerViewController.swift */; };
+		0F76EB5F232A7F8D00E0DFDB /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F76EB5E232A7F8D00E0DFDB /* Detail.storyboard */; };
 		0FCFC55822C145230082B924 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCFC55722C145230082B924 /* AppDelegate.swift */; };
 		0FCFC55A22C145230082B924 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCFC55922C145230082B924 /* MapViewController.swift */; };
 		0FCFC55D22C145230082B924 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FCFC55B22C145230082B924 /* Main.storyboard */; };
@@ -24,6 +29,11 @@
 		0F20739922F7073A00BC7383 /* config.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = config.json; sourceTree = "<group>"; };
 		0F76EB50232A706C00E0DFDB /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
 		0F76EB52232A716900E0DFDB /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		0F76EB54232A7D9A00E0DFDB /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		0F76EB56232A7E5100E0DFDB /* PulleyManagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PulleyManagerViewController.swift; path = ../PulleyManagerViewController.swift; sourceTree = "<group>"; };
+		0F76EB58232A7EC800E0DFDB /* Pulley.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Pulley.storyboard; path = ../Pulley.storyboard; sourceTree = "<group>"; };
+		0F76EB5B232A7F6D00E0DFDB /* DrawerContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DrawerContainerViewController.swift; path = ../DrawerContainerViewController.swift; sourceTree = "<group>"; };
+		0F76EB5E232A7F8D00E0DFDB /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
 		0FCFC55422C145230082B924 /* TravelPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FCFC55722C145230082B924 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0FCFC55922C145230082B924 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = ../MapViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +76,24 @@
 			path = "New Group";
 			sourceTree = "<group>";
 		};
+		0F76EB5A232A7F1300E0DFDB /* New Group1 */ = {
+			isa = PBXGroup;
+			children = (
+				0F76EB56232A7E5100E0DFDB /* PulleyManagerViewController.swift */,
+				0F76EB58232A7EC800E0DFDB /* Pulley.storyboard */,
+			);
+			path = "New Group1";
+			sourceTree = "<group>";
+		};
+		0F76EB5D232A7F7A00E0DFDB /* New Group2 */ = {
+			isa = PBXGroup;
+			children = (
+				0F76EB5B232A7F6D00E0DFDB /* DrawerContainerViewController.swift */,
+				0F76EB5E232A7F8D00E0DFDB /* Detail.storyboard */,
+			);
+			path = "New Group2";
+			sourceTree = "<group>";
+		};
 		0FCFC54B22C145230082B924 = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +119,9 @@
 				0FCFC55722C145230082B924 /* AppDelegate.swift */,
 				0F76EB52232A716900E0DFDB /* RootViewController.swift */,
 				0FCFC55B22C145230082B924 /* Main.storyboard */,
+				0F76EB54232A7D9A00E0DFDB /* MainCoordinator.swift */,
+				0F76EB5D232A7F7A00E0DFDB /* New Group2 */,
+				0F76EB5A232A7F1300E0DFDB /* New Group1 */,
 				0F76EB4F232A704E00E0DFDB /* New Group */,
 				0FCFC55E22C145230082B924 /* Assets.xcassets */,
 				0FCFC56022C145230082B924 /* LaunchScreen.storyboard */,
@@ -180,6 +211,8 @@
 				0FCFC56222C145230082B924 /* LaunchScreen.storyboard in Resources */,
 				0F20739A22F7073A00BC7383 /* config.json in Resources */,
 				0F76EB51232A706C00E0DFDB /* Map.storyboard in Resources */,
+				0F76EB59232A7EC800E0DFDB /* Pulley.storyboard in Resources */,
+				0F76EB5F232A7F8D00E0DFDB /* Detail.storyboard in Resources */,
 				0FCFC55F22C145230082B924 /* Assets.xcassets in Resources */,
 				0FCFC55D22C145230082B924 /* Main.storyboard in Resources */,
 			);
@@ -254,6 +287,9 @@
 				0FCFC55A22C145230082B924 /* MapViewController.swift in Sources */,
 				0FCFC55822C145230082B924 /* AppDelegate.swift in Sources */,
 				0F76EB53232A716900E0DFDB /* RootViewController.swift in Sources */,
+				0F76EB5C232A7F6D00E0DFDB /* DrawerContainerViewController.swift in Sources */,
+				0F76EB57232A7E5100E0DFDB /* PulleyManagerViewController.swift in Sources */,
+				0F76EB55232A7D9A00E0DFDB /* MainCoordinator.swift in Sources */,
 				0F20739722F6F40F00BC7383 /* Config.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

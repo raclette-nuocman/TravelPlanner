@@ -14,8 +14,12 @@ class RootViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let mapController = MapViewController.controller()
-        setCurrentViewController(mapController)
+        loadMainCoordinator()
+    }
+    
+    func loadMainCoordinator() {
+        MainCoordinator.shared.initViewControllers()
+        setCurrentViewController(MainCoordinator.shared.pulleyController)
     }
     
     func setCurrentViewController(_ controller: UIViewController) {
