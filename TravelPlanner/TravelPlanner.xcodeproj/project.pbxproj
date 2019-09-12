@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0F20739722F6F40F00BC7383 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F20739622F6F40F00BC7383 /* Config.swift */; };
 		0F20739A22F7073A00BC7383 /* config.json in Resources */ = {isa = PBXBuildFile; fileRef = 0F20739922F7073A00BC7383 /* config.json */; };
+		0F76EB51232A706C00E0DFDB /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F76EB50232A706C00E0DFDB /* Map.storyboard */; };
+		0F76EB53232A716900E0DFDB /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F76EB52232A716900E0DFDB /* RootViewController.swift */; };
 		0FCFC55822C145230082B924 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCFC55722C145230082B924 /* AppDelegate.swift */; };
 		0FCFC55A22C145230082B924 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCFC55922C145230082B924 /* MapViewController.swift */; };
 		0FCFC55D22C145230082B924 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FCFC55B22C145230082B924 /* Main.storyboard */; };
@@ -20,9 +22,11 @@
 /* Begin PBXFileReference section */
 		0F20739622F6F40F00BC7383 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		0F20739922F7073A00BC7383 /* config.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = config.json; sourceTree = "<group>"; };
+		0F76EB50232A706C00E0DFDB /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
+		0F76EB52232A716900E0DFDB /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		0FCFC55422C145230082B924 /* TravelPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FCFC55722C145230082B924 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0FCFC55922C145230082B924 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		0FCFC55922C145230082B924 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = ../MapViewController.swift; sourceTree = "<group>"; };
 		0FCFC55C22C145230082B924 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0FCFC55E22C145230082B924 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0FCFC56122C145230082B924 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -53,6 +57,15 @@
 			path = Config;
 			sourceTree = "<group>";
 		};
+		0F76EB4F232A704E00E0DFDB /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				0FCFC55922C145230082B924 /* MapViewController.swift */,
+				0F76EB50232A706C00E0DFDB /* Map.storyboard */,
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		0FCFC54B22C145230082B924 = {
 			isa = PBXGroup;
 			children = (
@@ -76,8 +89,9 @@
 			children = (
 				0F20739822F7071200BC7383 /* Config */,
 				0FCFC55722C145230082B924 /* AppDelegate.swift */,
-				0FCFC55922C145230082B924 /* MapViewController.swift */,
+				0F76EB52232A716900E0DFDB /* RootViewController.swift */,
 				0FCFC55B22C145230082B924 /* Main.storyboard */,
+				0F76EB4F232A704E00E0DFDB /* New Group */,
 				0FCFC55E22C145230082B924 /* Assets.xcassets */,
 				0FCFC56022C145230082B924 /* LaunchScreen.storyboard */,
 				0FCFC56322C145230082B924 /* Info.plist */,
@@ -165,6 +179,7 @@
 			files = (
 				0FCFC56222C145230082B924 /* LaunchScreen.storyboard in Resources */,
 				0F20739A22F7073A00BC7383 /* config.json in Resources */,
+				0F76EB51232A706C00E0DFDB /* Map.storyboard in Resources */,
 				0FCFC55F22C145230082B924 /* Assets.xcassets in Resources */,
 				0FCFC55D22C145230082B924 /* Main.storyboard in Resources */,
 			);
@@ -238,6 +253,7 @@
 			files = (
 				0FCFC55A22C145230082B924 /* MapViewController.swift in Sources */,
 				0FCFC55822C145230082B924 /* AppDelegate.swift in Sources */,
+				0F76EB53232A716900E0DFDB /* RootViewController.swift in Sources */,
 				0F20739722F6F40F00BC7383 /* Config.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

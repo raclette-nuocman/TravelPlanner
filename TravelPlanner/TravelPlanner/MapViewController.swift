@@ -25,6 +25,11 @@ class MapViewController: UIViewController {
         }
     }
 
+    class func controller() -> MapViewController {
+        let controller = UIStoryboard(name: "Map", bundle: nil).instantiateInitialViewController() as! MapViewController
+        return controller
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         initMapView()
