@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Pulley
 
 class MainCoordinator {
     
@@ -22,14 +23,19 @@ class MainCoordinator {
     func initViewControllers() {
         pulleyController.setPrimaryContentViewController(controller: mapController)
         pulleyController.setDrawerContentViewController(controller: detailContainerController)
+        pulleyController.delegate = self
         mapController.delegate = self
     }
 }
 
+extension MainCoordinator: PulleyDelegate {
+
+}
+
 extension MainCoordinator: MapDelegate {
+    
     func map(_ mapController: MapViewController, didSelect pointOfInterest: String, name: String) {
+        pulleyController.setDrawerPosition(position: .partiallyRevealed, animated: true)
         detailController.setTitle(name)
     }
-    
-    
 }
