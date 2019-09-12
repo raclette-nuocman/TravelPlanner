@@ -22,5 +22,14 @@ class MainCoordinator {
     func initViewControllers() {
         pulleyController.setPrimaryContentViewController(controller: mapController)
         pulleyController.setDrawerContentViewController(controller: detailContainerController)
+        mapController.delegate = self
     }
+}
+
+extension MainCoordinator: MapDelegate {
+    func map(_ mapController: MapViewController, didSelect pointOfInterest: String, name: String) {
+        detailController.setTitle(name)
+    }
+    
+    
 }

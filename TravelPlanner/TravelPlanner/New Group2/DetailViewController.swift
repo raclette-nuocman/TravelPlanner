@@ -20,4 +20,8 @@ class DetailViewController: UITableViewController {
         super.viewDidLoad()
         tableView.backgroundColor = .clear
     }
+    
+    func setTitle(_ title: String) {
+        titleLabel.text = title
+    }
 }

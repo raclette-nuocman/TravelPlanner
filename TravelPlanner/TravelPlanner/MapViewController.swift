@@ -8,10 +8,18 @@
 
 import UIKit
 import GoogleMaps
+import GooglePlaces
+
+protocol MapDelegate: class {
+    
+    func map(_ mapController: MapViewController, didSelect pointOfInterest: String, name: String)
+}
 
 class MapViewController: UIViewController {
 
     private let locationManager = CLLocationManager()
+    
+    weak var delegate: MapDelegate?
 
     var mapView: GMSMapView? {
         return view as? GMSMapView
@@ -20,7 +28,7 @@ class MapViewController: UIViewController {
     private var userLocation: CLLocation? {
         didSet {
             if oldValue == nil, let location = userLocation {
-                zoom(to: location)
+                zoom(to: location.coordinate)
             }
         }
     }
@@ -40,6 +48,7 @@ class MapViewController: UIViewController {
         let camera = GMSCameraPosition.camera(withLatitude: 44, longitude: -6, zoom: 9)
         let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
         mapView.isMyLocationEnabled = true
+        mapView.delegate = self
         view = mapView
     }
 
@@ -51,8 +60,8 @@ class MapViewController: UIViewController {
         locationManager.startUpdatingLocation()
     }
 
-    private func zoom(to location: CLLocation) {
-        let camera = GMSCameraPosition.camera(withTarget: location.coordinate, zoom: 15)
+    private func zoom(to location: CLLocationCoordinate2D) {
+        let camera = GMSCameraPosition.camera(withTarget: location, zoom: 15)
         mapView?.animate(to: camera)
     }
 }
@@ -66,3 +75,11 @@ extension MapViewController: CLLocationManagerDelegate {
     }
 }
 
+extension MapViewController: GMSMapViewDelegate {
+    
+    func mapView(_ mapView: GMSMapView, didTapPOIWithPlaceID placeID: String, name: String, location: CLLocationCoordinate2D) {
+        zoom(to: location)
+        delegate?.map(self, didSelect: placeID, name: name)
+    }
+    
+}
