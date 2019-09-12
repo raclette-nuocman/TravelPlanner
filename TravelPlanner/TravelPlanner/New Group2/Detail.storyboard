@@ -43,7 +43,7 @@
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6AF-Zd-LDw">
                                         <rect key="frame" x="0.0" y="40" width="414" height="676"/>
                                         <connections>
-                                            <segue destination="rzq-85-Ztb" kind="embed" id="6fk-pl-9Uk"/>
+                                            <segue destination="7QR-yI-E5V" kind="embed" id="oJD-Af-4e6"/>
                                         </connections>
                                     </containerView>
                                 </subviews>
@@ -67,19 +67,55 @@
             </objects>
             <point key="canvasLocation" x="354" y="-181"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="mYd-FE-yM9">
+        <!--Detail View Controller-->
+        <scene sceneID="dFg-BL-OAT">
             <objects>
-                <viewController id="rzq-85-Ztb" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="dBn-E4-BKc">
+                <tableViewController id="7QR-yI-E5V" customClass="DetailViewController" customModule="TravelPlanner" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="0vg-Ch-mno">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="676"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rvr-Ub-9rY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection id="BbV-Fb-4Ks">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Oa1-4e-t40">
+                                        <rect key="frame" x="0.0" y="35" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Oa1-4e-t40" id="jSh-3e-J6o">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i1s-Cq-GeB">
+                                                    <rect key="frame" x="10" y="4" width="394" height="36"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="i1s-Cq-GeB" firstAttribute="leading" secondItem="jSh-3e-J6o" secondAttribute="leading" constant="10" id="JKa-uT-vEZ"/>
+                                                <constraint firstAttribute="trailing" secondItem="i1s-Cq-GeB" secondAttribute="trailing" constant="10" id="Qf3-FC-ha3"/>
+                                                <constraint firstItem="i1s-Cq-GeB" firstAttribute="centerY" secondItem="jSh-3e-J6o" secondAttribute="centerY" id="scN-WS-R5m"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="7QR-yI-E5V" id="ML0-jA-woc"/>
+                            <outlet property="delegate" destination="7QR-yI-E5V" id="5vJ-EY-laW"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="titleLabel" destination="i1s-Cq-GeB" id="tmn-LV-Vip"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OtA-Qh-tR5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1688" y="-182"/>
+            <point key="canvasLocation" x="1377" y="-182"/>
         </scene>
     </scenes>
 </document>

@@ -16,6 +16,7 @@
 		0F76EB59232A7EC800E0DFDB /* Pulley.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F76EB58232A7EC800E0DFDB /* Pulley.storyboard */; };
 		0F76EB5C232A7F6D00E0DFDB /* DrawerContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F76EB5B232A7F6D00E0DFDB /* DrawerContainerViewController.swift */; };
 		0F76EB5F232A7F8D00E0DFDB /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F76EB5E232A7F8D00E0DFDB /* Detail.storyboard */; };
+		0F76EB61232A837400E0DFDB /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F76EB60232A837400E0DFDB /* DetailViewController.swift */; };
 		0FCFC55822C145230082B924 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCFC55722C145230082B924 /* AppDelegate.swift */; };
 		0FCFC55A22C145230082B924 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCFC55922C145230082B924 /* MapViewController.swift */; };
 		0FCFC55D22C145230082B924 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FCFC55B22C145230082B924 /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 		0F76EB58232A7EC800E0DFDB /* Pulley.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Pulley.storyboard; path = ../Pulley.storyboard; sourceTree = "<group>"; };
 		0F76EB5B232A7F6D00E0DFDB /* DrawerContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DrawerContainerViewController.swift; path = ../DrawerContainerViewController.swift; sourceTree = "<group>"; };
 		0F76EB5E232A7F8D00E0DFDB /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
+		0F76EB60232A837400E0DFDB /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		0FCFC55422C145230082B924 /* TravelPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FCFC55722C145230082B924 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0FCFC55922C145230082B924 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = ../MapViewController.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				0F76EB5B232A7F6D00E0DFDB /* DrawerContainerViewController.swift */,
+				0F76EB60232A837400E0DFDB /* DetailViewController.swift */,
 				0F76EB5E232A7F8D00E0DFDB /* Detail.storyboard */,
 			);
 			path = "New Group2";
@@ -291,6 +294,7 @@
 				0F76EB57232A7E5100E0DFDB /* PulleyManagerViewController.swift in Sources */,
 				0F76EB55232A7D9A00E0DFDB /* MainCoordinator.swift in Sources */,
 				0F20739722F6F40F00BC7383 /* Config.swift in Sources */,
+				0F76EB61232A837400E0DFDB /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

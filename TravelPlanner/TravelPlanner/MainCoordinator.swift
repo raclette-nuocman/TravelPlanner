@@ -15,6 +15,9 @@ class MainCoordinator {
     var pulleyController = PulleyManagerViewController.controller()
     var mapController = MapViewController.controller()
     var detailContainerController = DrawerContainerViewController.controller()
+    var detailController: DetailViewController {
+        return detailContainerController.children.first as! DetailViewController
+    }
     
     func initViewControllers() {
         pulleyController.setPrimaryContentViewController(controller: mapController)
