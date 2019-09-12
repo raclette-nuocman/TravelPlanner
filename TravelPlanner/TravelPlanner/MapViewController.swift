@@ -24,7 +24,7 @@ class MapViewController: UIViewController {
     var mapView: GMSMapView? {
         return view as? GMSMapView
     }
-
+    
     private var userLocation: CLLocation? {
         didSet {
             if oldValue == nil, let location = userLocation {
@@ -47,7 +47,10 @@ class MapViewController: UIViewController {
     private func initMapView() {
         let camera = GMSCameraPosition.camera(withLatitude: 44, longitude: -6, zoom: 9)
         let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
+        mapView.padding = UIEdgeInsets(top: 0, left: 0, bottom: 80, right: 0)
         mapView.isMyLocationEnabled = true
+        mapView.settings.compassButton = true
+        mapView.settings.myLocationButton = true
         mapView.delegate = self
         view = mapView
     }
@@ -81,5 +84,4 @@ extension MapViewController: GMSMapViewDelegate {
         zoom(to: location)
         delegate?.map(self, didSelect: placeID, name: name)
     }
-    
 }
