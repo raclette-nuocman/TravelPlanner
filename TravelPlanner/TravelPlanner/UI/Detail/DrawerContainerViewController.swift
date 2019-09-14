@@ -8,12 +8,24 @@
 
 import UIKit
 
+protocol ContainerDelegate: class {
+    
+    func backButtonHasBeenPressed()
+}
+
 class DrawerContainerViewController: UIViewController {
 
+    weak var delegate: ContainerDelegate?
+    
     @IBOutlet var pullView: UIView!
     @IBOutlet var containerView: UIView!
+    @IBOutlet var backButton: UIButton!
     
-    var currentController: UIViewController?
+    var currentController: UIViewController? {
+        didSet {
+            updateUI()
+        }
+    }
     
     class func controller() -> DrawerContainerViewController {
         return UIStoryboard(name: "Detail", bundle: nil).instantiateInitialViewController() as! DrawerContainerViewController
@@ -22,6 +34,15 @@ class DrawerContainerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         pullView.layer.cornerRadius = pullView.frame.height / 2
+        updateUI()
+    }
+    
+    func updateUI() {
+        if let controller = currentController {
+            backButton.isHidden = !(type(of: controller) == DetailPlaceViewController.self)
+        } else {
+            backButton.isHidden = true
+        }
     }
     
     func loadController(_ controller: UIViewController) {
@@ -48,5 +69,9 @@ class DrawerContainerViewController: UIViewController {
         controller.view.removeFromSuperview()
         controller.removeFromParent()
         currentController = nil
+    }
+    
+    @IBAction func backButtonHasBeenPressed(_ sender: Any) {
+        delegate?.backButtonHasBeenPressed()
     }
 }

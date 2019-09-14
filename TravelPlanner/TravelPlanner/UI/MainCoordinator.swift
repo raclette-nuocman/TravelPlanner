@@ -20,19 +20,26 @@ class MainCoordinator {
     var detailPlaceController: DetailPlaceViewController? {
         return detailContainerController.currentController as? DetailPlaceViewController
     }
-    var detailTripController: DetailTripViewController? {
-        return detailContainerController.currentController as? DetailTripViewController
-    }
+    var detailTripController: DetailTripViewController!
     
     func initViewControllers() {
         pulleyController.setPrimaryContentViewController(controller: mapController)
         pulleyController.setDrawerContentViewController(controller: detailContainerController)
+        detailContainerController.delegate = self
         pulleyController.delegate = self
         mapController.delegate = self
-        
-        let tripController = DetailTripViewController.controller()
-        tripController.trip = TripManager.shared.currentTrip
-        detailContainerController.loadController(tripController)
+        detailTripController = DetailTripViewController.controller()
+        detailTripController.trip = TripManager.shared.currentTrip
+        showTripController()
+    }
+    
+    func showTripController() {
+        detailContainerController.loadController(detailTripController)
+    }
+    
+    func showPlaceController() {
+        let detailPlaceController = DetailPlaceViewController.controller()
+        detailContainerController.loadController(detailPlaceController)
     }
     
     func getPlaceInfos(id: String) {
@@ -77,5 +84,11 @@ extension MainCoordinator: DetailPlaceDelegate {
                 completion(true)
             }
         }
+    }
+}
+
+extension MainCoordinator: ContainerDelegate {
+    func backButtonHasBeenPressed() {
+        showTripController()
     }
 }

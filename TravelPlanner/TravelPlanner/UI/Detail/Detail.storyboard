@@ -19,25 +19,49 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="asc-eL-QjV">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hSm-fQ-wPX">
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="DEo-sV-3MQ">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="40"/>
                                         <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bKW-LW-LZR">
+                                                <rect key="frame" x="0.0" y="0.0" width="182" height="40"/>
+                                                <subviews>
+                                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jw7-nR-aA2">
+                                                        <rect key="frame" x="10" y="0.0" width="162" height="40"/>
+                                                        <color key="tintColor" systemColor="linkColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <state key="normal" title="Back to trip" image="arrowshape.turn.up.left" catalog="system">
+                                                            <color key="titleColor" systemColor="linkColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="backButtonHasBeenPressed:" destination="HzM-b2-OEE" eventType="touchUpInside" id="aEI-t4-wqJ"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="jw7-nR-aA2" secondAttribute="bottom" id="WjF-RS-M5P"/>
+                                                    <constraint firstItem="jw7-nR-aA2" firstAttribute="top" secondItem="bKW-LW-LZR" secondAttribute="top" id="h0k-9A-HcI"/>
+                                                    <constraint firstItem="jw7-nR-aA2" firstAttribute="leading" secondItem="bKW-LW-LZR" secondAttribute="leading" constant="10" id="jLe-Ib-U1I"/>
+                                                    <constraint firstAttribute="trailing" secondItem="jw7-nR-aA2" secondAttribute="trailing" constant="10" id="m8U-fd-N6O"/>
+                                                </constraints>
+                                            </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uyG-V9-Jmq">
                                                 <rect key="frame" x="182" y="15" width="50" height="10"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="10" id="B2h-Bt-AoJ"/>
+                                                    <constraint firstAttribute="height" constant="10" id="NYi-Nu-4aJ"/>
                                                     <constraint firstAttribute="width" constant="50" id="lNd-Nf-sF4"/>
                                                 </constraints>
                                             </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p3b-zx-fKh">
+                                                <rect key="frame" x="232" y="0.0" width="182" height="40"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
                                         </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="uyG-V9-Jmq" firstAttribute="centerX" secondItem="hSm-fQ-wPX" secondAttribute="centerX" id="TIN-MZ-PoP"/>
-                                            <constraint firstAttribute="height" constant="40" id="hQU-Hj-hmI"/>
-                                            <constraint firstItem="uyG-V9-Jmq" firstAttribute="centerY" secondItem="hSm-fQ-wPX" secondAttribute="centerY" id="rl6-gV-AhX"/>
+                                            <constraint firstAttribute="height" constant="40" id="c5p-p2-wGD"/>
+                                            <constraint firstItem="bKW-LW-LZR" firstAttribute="width" secondItem="p3b-zx-fKh" secondAttribute="width" id="l5T-Tz-sOJ"/>
                                         </constraints>
-                                    </view>
+                                    </stackView>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6AF-Zd-LDw">
                                         <rect key="frame" x="0.0" y="40" width="414" height="696"/>
                                     </containerView>
@@ -54,6 +78,7 @@
                         <viewLayoutGuide key="safeArea" id="bIb-Pe-7Ft"/>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="jw7-nR-aA2" id="T8c-9z-w8X"/>
                         <outlet property="containerView" destination="6AF-Zd-LDw" id="oYq-mR-zTy"/>
                         <outlet property="pullView" destination="uyG-V9-Jmq" id="4k7-2f-xs6"/>
                     </connections>
@@ -66,7 +91,7 @@
         <scene sceneID="dFg-BL-OAT">
             <objects>
                 <tableViewController storyboardIdentifier="place" id="7QR-yI-E5V" customClass="DetailPlaceViewController" customModule="TravelPlanner" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="0vg-Ch-mno">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="0vg-Ch-mno">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -175,7 +200,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="zZu-K2-T4q" secondAttribute="bottom" id="Czf-6T-KWp"/>
                                             <constraint firstItem="zZu-K2-T4q" firstAttribute="leading" secondItem="hbB-5e-wfs" secondAttribute="leading" constant="20" id="DUY-cO-KMM"/>
@@ -210,6 +235,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="686"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="placeCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="hDj-OY-HhU">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.666667938232422"/>
@@ -217,7 +243,9 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hDj-OY-HhU" id="SSR-go-cBQ">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -231,4 +259,7 @@
             <point key="canvasLocation" x="3165" y="-182"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="arrowshape.turn.up.left" catalog="system" width="64" height="52"/>
+    </resources>
 </document>

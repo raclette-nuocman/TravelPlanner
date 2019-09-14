@@ -19,6 +19,7 @@ class TripPlacesTableViewController: UITableViewController {
     
     func updateUI(with content: [GMSPlace]?) {
         places = content
+        tableView.backgroundColor = .clear
         tableView.reloadData()
     }
 
