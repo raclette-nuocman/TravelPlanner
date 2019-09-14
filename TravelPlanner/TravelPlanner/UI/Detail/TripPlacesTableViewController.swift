@@ -37,8 +37,8 @@ class TripPlacesTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "placeCell", for: indexPath)
-        cell.textLabel?.text = places?[indexPath.row].name
+        let cell = tableView.dequeueReusableCell(withIdentifier: "placeCell", for: indexPath) as! PlaceCell
+        cell.nameLabel.text = places?[indexPath.row].name
         return cell
     }
     

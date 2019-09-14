@@ -29,6 +29,7 @@
 		0FD0A5A2232D120B00305AF5 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD0A5A1232D120B00305AF5 /* Utils.swift */; };
 		0FD0A5A4232D1DDB00305AF5 /* DetailTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD0A5A3232D1DDB00305AF5 /* DetailTripViewController.swift */; };
 		0FD0A5A6232D1E7000305AF5 /* TripPlacesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD0A5A5232D1E7000305AF5 /* TripPlacesTableViewController.swift */; };
+		0FD0A5AB232D44E800305AF5 /* PlaceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD0A5AA232D44E800305AF5 /* PlaceCell.swift */; };
 		3FD2141F90E1C6A884D91877 /* Pods_TravelPlanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A08E7C73B2F6450449901CA8 /* Pods_TravelPlanner.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +58,7 @@
 		0FD0A5A1232D120B00305AF5 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		0FD0A5A3232D1DDB00305AF5 /* DetailTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTripViewController.swift; sourceTree = "<group>"; };
 		0FD0A5A5232D1E7000305AF5 /* TripPlacesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripPlacesTableViewController.swift; sourceTree = "<group>"; };
+		0FD0A5AA232D44E800305AF5 /* PlaceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceCell.swift; sourceTree = "<group>"; };
 		4FE23B7CE0B7719510534FCC /* Pods-TravelPlanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelPlanner.debug.xcconfig"; path = "Target Support Files/Pods-TravelPlanner/Pods-TravelPlanner.debug.xcconfig"; sourceTree = "<group>"; };
 		8F14BCC645ECA21AF1750C56 /* Pods-TravelPlanner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelPlanner.release.xcconfig"; path = "Target Support Files/Pods-TravelPlanner/Pods-TravelPlanner.release.xcconfig"; sourceTree = "<group>"; };
 		A08E7C73B2F6450449901CA8 /* Pods_TravelPlanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TravelPlanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -109,6 +111,7 @@
 				0FD0A5A3232D1DDB00305AF5 /* DetailTripViewController.swift */,
 				0FD0A5A5232D1E7000305AF5 /* TripPlacesTableViewController.swift */,
 				0F76EB60232A837400E0DFDB /* DetailPlaceViewController.swift */,
+				0FD0A5AA232D44E800305AF5 /* PlaceCell.swift */,
 				0F76EB5E232A7F8D00E0DFDB /* Detail.storyboard */,
 			);
 			path = Detail;
@@ -344,6 +347,7 @@
 				0FD0A590232CE89100305AF5 /* Trip.swift in Sources */,
 				0F76EB55232A7D9A00E0DFDB /* MainCoordinator.swift in Sources */,
 				0F20739722F6F40F00BC7383 /* Config.swift in Sources */,
+				0FD0A5AB232D44E800305AF5 /* PlaceCell.swift in Sources */,
 				0FD0A5A0232D097A00305AF5 /* TripManager.swift in Sources */,
 				0F76EB61232A837400E0DFDB /* DetailPlaceViewController.swift in Sources */,
 				0FD0A5A2232D120B00305AF5 /* Utils.swift in Sources */,
