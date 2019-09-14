@@ -8,6 +8,7 @@
 
 import UIKit
 import Pulley
+import GooglePlaces
 
 class MainCoordinator {
     
@@ -25,6 +26,7 @@ class MainCoordinator {
         pulleyController.setDrawerContentViewController(controller: detailContainerController)
         pulleyController.delegate = self
         mapController.delegate = self
+        detailController.delegate = self
     }
     
     func getPlaceInfos(id: String) {
@@ -54,5 +56,19 @@ extension MainCoordinator: MapDelegate {
         pulleyController.showPartially()
         detailController.setTitle(name)
         getPlaceInfos(id: pointOfInterest)
+    }
+}
+
+extension MainCoordinator: DetailDelegate {
+    
+    func addPlaceToTrip(_ place: GMSPlace, completion: @escaping (Bool) -> Void) {
+        TripManager.shared.addPlaceToTrip(place: place, trip: TripManager.shared.currentTrip!) { [weak self] (error) in
+            if let error = error {
+                self?.showError(error)
+                completion(false)
+            } else {
+                completion(true)
+            }
+        }
     }
 }

@@ -11,5 +11,6 @@ import GooglePlaces
 
 class Trip {
     
+    var id: String!
     var places = [GMSPlace]()
 }

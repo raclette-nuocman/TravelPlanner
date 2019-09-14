@@ -9,16 +9,24 @@
 import UIKit
 import GooglePlaces
 
+protocol DetailDelegate: class {
+    
+    func addPlaceToTrip(_ place: GMSPlace, completion: @escaping (_ succeed: Bool) -> Void)
+}
+
 class DetailViewController: UITableViewController {
 
     var place: GMSPlace? {
         didSet {
-            self.updateInfos()
+            self.updateUI()
         }
     }
     
+    weak var delegate: DetailDelegate?
+    
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var addressLabel: UILabel!
+    @IBOutlet var addToTripButton: UIButton!
     
     class func controller() -> DetailViewController {
         return UIStoryboard(name: "Detail", bundle: nil).instantiateViewController(withIdentifier: "detail") as! DetailViewController
@@ -28,19 +36,50 @@ class DetailViewController: UITableViewController {
         super.viewDidLoad()
         tableView.backgroundColor = .clear
         setFakeHeaderView()
-        updateInfos()
+        updateUI()
     }
     
-    func updateInfos() {
+    func updateUI() {
         guard let place = place else {
             return
         }
         titleLabel.text = place.name
         addressLabel.text = place.formattedAddress
+        updateAddToTripButton()
+    }
+    
+    func updateAddToTripButton() {
+        addToTripButton.layer.cornerRadius = addToTripButton.frame.height / 2
+        guard let place = place else {
+            return
+        }
+        if let trip = TripManager.shared.currentTrip {
+            addToTripButton.isHidden = false
+            if trip.places.contains(place) {
+                addToTripButton.titleLabel?.text = "Added"
+                addToTripButton.backgroundColor = #colorLiteral(red: 0.2039999962, green: 0.7799999714, blue: 0.3490000069, alpha: 1)
+                addToTripButton.isEnabled = false
+            } else {
+                addToTripButton.titleLabel?.text = "Add to trip"
+                addToTripButton.backgroundColor = #colorLiteral(red: 0, green: 0.4779999852, blue: 1, alpha: 1)
+                addToTripButton.isEnabled = false
+            }
+        } else {
+            addToTripButton.isHidden = true
+        }
     }
     
     func setTitle(_ title: String) {
         titleLabel.text = title
+    }
+    
+    @IBAction func addToTripButtonHasBeenPressed(_ sender: UIButton) {
+        guard let place = place else {
+            return
+        }
+        delegate?.addPlaceToTrip(place) { [weak self] _ in
+            self?.updateAddToTripButton()
+        }
     }
     
     func setFakeHeaderView() {

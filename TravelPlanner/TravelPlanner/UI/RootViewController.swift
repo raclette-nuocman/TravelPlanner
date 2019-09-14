@@ -14,12 +14,17 @@ class RootViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        initManagers()
         loadMainCoordinator()
     }
     
     func loadMainCoordinator() {
         MainCoordinator.shared.initViewControllers()
         setCurrentViewController(MainCoordinator.shared.pulleyController)
+    }
+    
+    func initManagers() {
+        TripManager.shared.loadTrips()
     }
     
     func setCurrentViewController(_ controller: UIViewController) {

@@ -24,7 +24,7 @@ class GooglePlacesAPIManager {
             } else if let gmsPlace = place {
                 completion(gmsPlace, nil)
             } else {
-                let error = NSError(domain: Bundle.main.bundleIdentifier!, code: 0, userInfo: [NSLocalizedDescriptionKey: "An unknown error has been encountered while fetching the place."])
+                let error = NSError.createError(message:  "An unknown error has been encountered while fetching the place.")
                 completion(nil, error)
             }
         }
