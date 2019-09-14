@@ -59,16 +59,14 @@ class DetailPlaceViewController: UITableViewController {
         if let trip = TripManager.shared.currentTrip {
             addToTripButton.isHidden = false
             if trip.places.contains(place) {
-                addToTripButton.titleLabel?.text = "Added"
+                addToTripButton.setTitle("Added", for: .normal)
                 addToTripButton.backgroundColor = #colorLiteral(red: 0.2039999962, green: 0.7799999714, blue: 0.3490000069, alpha: 1)
                 addToTripButton.isEnabled = false
             } else {
-                addToTripButton.titleLabel?.text = "Add to trip"
+                addToTripButton.setTitle("Add to trip", for: .normal)
                 addToTripButton.backgroundColor = #colorLiteral(red: 0, green: 0.4779999852, blue: 1, alpha: 1)
                 addToTripButton.isEnabled = true
             }
-        } else {
-            addToTripButton.isHidden = true
         }
     }
     
@@ -78,10 +76,6 @@ class DetailPlaceViewController: UITableViewController {
             cell.isHidden = value
         }
         addToTripButton.isHidden = value
-    }
-    
-    func setTitle(_ title: String) {
-        titleLabel.text = title
     }
     
     @IBAction func addToTripButtonHasBeenPressed(_ sender: UIButton) {

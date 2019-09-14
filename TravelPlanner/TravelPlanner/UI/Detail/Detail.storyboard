@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -157,15 +158,14 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="68"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qvj-vU-uDR">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EPc-sm-u2z">
                                                     <rect key="frame" x="20" y="11" width="374" height="46"/>
-                                                    <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                                    <state key="normal" title="Button">
+                                                    <color key="backgroundColor" name="addToTripButton.add"/>
+                                                    <state key="normal" title="Button label">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
                                                     <connections>
-                                                        <action selector="addToTripButtonHasBeenPressed:" destination="7QR-yI-E5V" eventType="touchUpInside" id="ZAj-HS-36Z"/>
+                                                        <action selector="addToTripButtonHasBeenPressed:" destination="7QR-yI-E5V" eventType="touchUpInside" id="GSP-F3-7q3"/>
                                                     </connections>
                                                 </button>
                                                 <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="grf-fV-wOL">
@@ -174,12 +174,12 @@
                                                 </activityIndicatorView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="Qvj-vU-uDR" firstAttribute="top" secondItem="QGg-HT-J2i" secondAttribute="topMargin" id="1wa-Iy-0I4"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="EPc-sm-u2z" secondAttribute="bottom" id="1Gn-yP-pSj"/>
                                                 <constraint firstItem="grf-fV-wOL" firstAttribute="centerY" secondItem="QGg-HT-J2i" secondAttribute="centerY" id="3dw-tB-gtn"/>
-                                                <constraint firstItem="Qvj-vU-uDR" firstAttribute="leading" secondItem="QGg-HT-J2i" secondAttribute="leadingMargin" id="EUH-wH-Ell"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="Qvj-vU-uDR" secondAttribute="bottom" id="LwK-TG-OeX"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="Qvj-vU-uDR" secondAttribute="trailing" id="jRm-Cr-4fV"/>
+                                                <constraint firstItem="EPc-sm-u2z" firstAttribute="leading" secondItem="QGg-HT-J2i" secondAttribute="leadingMargin" id="FPY-lh-vgQ"/>
+                                                <constraint firstItem="EPc-sm-u2z" firstAttribute="top" secondItem="QGg-HT-J2i" secondAttribute="topMargin" id="bnF-zf-pMG"/>
                                                 <constraint firstItem="grf-fV-wOL" firstAttribute="centerX" secondItem="QGg-HT-J2i" secondAttribute="centerX" id="mee-Pi-kDk"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="EPc-sm-u2z" secondAttribute="trailing" id="uYm-SV-Oq0"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -194,7 +194,7 @@
                     </tableView>
                     <connections>
                         <outlet property="activityIndicator" destination="grf-fV-wOL" id="LeW-bK-yJp"/>
-                        <outlet property="addToTripButton" destination="Qvj-vU-uDR" id="xuA-n5-TkL"/>
+                        <outlet property="addToTripButton" destination="EPc-sm-u2z" id="h3i-Pk-Jia"/>
                         <outlet property="addressLabel" destination="rTr-5S-PaV" id="XY3-jQ-66b"/>
                         <outlet property="titleLabel" destination="02C-MD-xPO" id="nXw-pj-JVi"/>
                         <outletCollection property="cellsToHideDuringLoading" destination="fBb-DW-LvQ" collectionClass="NSMutableArray" id="DuZ-QP-ovU"/>
@@ -286,5 +286,8 @@
     </scenes>
     <resources>
         <image name="arrowshape.turn.up.left" catalog="system" width="64" height="52"/>
+        <namedColor name="addToTripButton.add">
+            <color red="0.0" green="0.4779999852180481" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

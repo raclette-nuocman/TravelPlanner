@@ -39,6 +39,7 @@ class MainCoordinator {
     
     func showPlaceController() {
         let detailPlaceController = DetailPlaceViewController.controller()
+        detailPlaceController.delegate = self
         detailContainerController.loadController(detailPlaceController)
     }
     
@@ -67,9 +68,8 @@ extension MainCoordinator: PulleyDelegate {
 extension MainCoordinator: MapDelegate {
     
     func map(_ mapController: MapViewController, didSelect pointOfInterest: String, name: String) {
-        let detailPlaceController = DetailPlaceViewController.controller()
-        detailContainerController.loadController(detailPlaceController)
-        detailPlaceController.showActivityIndicator(true)
+        showPlaceController()
+        detailPlaceController?.showActivityIndicator(true)
         pulleyController.showPartially()
         getPlaceInfos(id: pointOfInterest)
     }
