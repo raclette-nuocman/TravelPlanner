@@ -28,6 +28,9 @@ class DetailPlaceViewController: UITableViewController {
     @IBOutlet var addressLabel: UILabel!
     @IBOutlet var addToTripButton: UIButton!
     
+    @IBOutlet var cellsToHideDuringLoading: [UITableViewCell]!
+    @IBOutlet var activityIndicator: UIActivityIndicatorView!
+    
     class func controller() -> DetailPlaceViewController {
         return UIStoryboard(name: "Detail", bundle: nil).instantiateViewController(withIdentifier: "place") as! DetailPlaceViewController
     }
@@ -62,11 +65,19 @@ class DetailPlaceViewController: UITableViewController {
             } else {
                 addToTripButton.titleLabel?.text = "Add to trip"
                 addToTripButton.backgroundColor = #colorLiteral(red: 0, green: 0.4779999852, blue: 1, alpha: 1)
-                addToTripButton.isEnabled = false
+                addToTripButton.isEnabled = true
             }
         } else {
             addToTripButton.isHidden = true
         }
+    }
+    
+    func showActivityIndicator(_ value: Bool) {
+        activityIndicator.isHidden = !value
+        cellsToHideDuringLoading.forEach { (cell) in
+            cell.isHidden = value
+        }
+        addToTripButton.isHidden = value
     }
     
     func setTitle(_ title: String) {

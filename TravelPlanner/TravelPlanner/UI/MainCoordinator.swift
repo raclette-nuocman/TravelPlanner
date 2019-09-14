@@ -48,6 +48,7 @@ class MainCoordinator {
                 self?.showError(error)
             } else if let place = place {
                 self?.detailPlaceController?.place = place
+                self?.detailPlaceController?.showActivityIndicator(false)
             }
         }
     }
@@ -68,6 +69,7 @@ extension MainCoordinator: MapDelegate {
     func map(_ mapController: MapViewController, didSelect pointOfInterest: String, name: String) {
         let detailPlaceController = DetailPlaceViewController.controller()
         detailContainerController.loadController(detailPlaceController)
+        detailPlaceController.showActivityIndicator(true)
         pulleyController.showPartially()
         getPlaceInfos(id: pointOfInterest)
     }
