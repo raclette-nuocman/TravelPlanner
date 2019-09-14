@@ -9,12 +9,12 @@
 import UIKit
 import GooglePlaces
 
-protocol DetailDelegate: class {
+protocol DetailPlaceDelegate: class {
     
     func addPlaceToTrip(_ place: GMSPlace, completion: @escaping (_ succeed: Bool) -> Void)
 }
 
-class DetailViewController: UITableViewController {
+class DetailPlaceViewController: UITableViewController {
 
     var place: GMSPlace? {
         didSet {
@@ -22,14 +22,14 @@ class DetailViewController: UITableViewController {
         }
     }
     
-    weak var delegate: DetailDelegate?
+    weak var delegate: DetailPlaceDelegate?
     
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var addressLabel: UILabel!
     @IBOutlet var addToTripButton: UIButton!
     
-    class func controller() -> DetailViewController {
-        return UIStoryboard(name: "Detail", bundle: nil).instantiateViewController(withIdentifier: "detail") as! DetailViewController
+    class func controller() -> DetailPlaceViewController {
+        return UIStoryboard(name: "Detail", bundle: nil).instantiateViewController(withIdentifier: "place") as! DetailPlaceViewController
     }
     
     override func viewDidLoad() {
@@ -84,7 +84,11 @@ class DetailViewController: UITableViewController {
     
     func setFakeHeaderView() {
         let fakeHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 0.5))
-        fakeHeaderView.backgroundColor = .lightGray
+        fakeHeaderView.backgroundColor = .clear
         tableView.tableHeaderView = fakeHeaderView
+    }
+    
+    deinit {
+        print("Detail place has been deinitialized")
     }
 }

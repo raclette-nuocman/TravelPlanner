@@ -13,7 +13,7 @@
 		0F76EB53232A716900E0DFDB /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F76EB52232A716900E0DFDB /* RootViewController.swift */; };
 		0F76EB55232A7D9A00E0DFDB /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F76EB54232A7D9A00E0DFDB /* MainCoordinator.swift */; };
 		0F76EB5F232A7F8D00E0DFDB /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F76EB5E232A7F8D00E0DFDB /* Detail.storyboard */; };
-		0F76EB61232A837400E0DFDB /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F76EB60232A837400E0DFDB /* DetailViewController.swift */; };
+		0F76EB61232A837400E0DFDB /* DetailPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F76EB60232A837400E0DFDB /* DetailPlaceViewController.swift */; };
 		0F76EB63232AA2F300E0DFDB /* style.json in Resources */ = {isa = PBXBuildFile; fileRef = 0F76EB62232AA2F200E0DFDB /* style.json */; };
 		0FCFC55822C145230082B924 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCFC55722C145230082B924 /* AppDelegate.swift */; };
 		0FCFC55D22C145230082B924 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FCFC55B22C145230082B924 /* Main.storyboard */; };
@@ -27,6 +27,8 @@
 		0FD0A59D232CECA600305AF5 /* GooglePlacesAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD0A59C232CECA600305AF5 /* GooglePlacesAPIManager.swift */; };
 		0FD0A5A0232D097A00305AF5 /* TripManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD0A59F232D097A00305AF5 /* TripManager.swift */; };
 		0FD0A5A2232D120B00305AF5 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD0A5A1232D120B00305AF5 /* Utils.swift */; };
+		0FD0A5A4232D1DDB00305AF5 /* DetailTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD0A5A3232D1DDB00305AF5 /* DetailTripViewController.swift */; };
+		0FD0A5A6232D1E7000305AF5 /* TripPlacesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD0A5A5232D1E7000305AF5 /* TripPlacesTableViewController.swift */; };
 		3FD2141F90E1C6A884D91877 /* Pods_TravelPlanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A08E7C73B2F6450449901CA8 /* Pods_TravelPlanner.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,7 +39,7 @@
 		0F76EB52232A716900E0DFDB /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		0F76EB54232A7D9A00E0DFDB /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		0F76EB5E232A7F8D00E0DFDB /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
-		0F76EB60232A837400E0DFDB /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		0F76EB60232A837400E0DFDB /* DetailPlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPlaceViewController.swift; sourceTree = "<group>"; };
 		0F76EB62232AA2F200E0DFDB /* style.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = style.json; sourceTree = "<group>"; };
 		0FCFC55422C145230082B924 /* TravelPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FCFC55722C145230082B924 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +55,8 @@
 		0FD0A59C232CECA600305AF5 /* GooglePlacesAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooglePlacesAPIManager.swift; sourceTree = "<group>"; };
 		0FD0A59F232D097A00305AF5 /* TripManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripManager.swift; sourceTree = "<group>"; };
 		0FD0A5A1232D120B00305AF5 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		0FD0A5A3232D1DDB00305AF5 /* DetailTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTripViewController.swift; sourceTree = "<group>"; };
+		0FD0A5A5232D1E7000305AF5 /* TripPlacesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripPlacesTableViewController.swift; sourceTree = "<group>"; };
 		4FE23B7CE0B7719510534FCC /* Pods-TravelPlanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelPlanner.debug.xcconfig"; path = "Target Support Files/Pods-TravelPlanner/Pods-TravelPlanner.debug.xcconfig"; sourceTree = "<group>"; };
 		8F14BCC645ECA21AF1750C56 /* Pods-TravelPlanner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelPlanner.release.xcconfig"; path = "Target Support Files/Pods-TravelPlanner/Pods-TravelPlanner.release.xcconfig"; sourceTree = "<group>"; };
 		A08E7C73B2F6450449901CA8 /* Pods_TravelPlanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TravelPlanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,7 +106,9 @@
 			isa = PBXGroup;
 			children = (
 				0FD0A594232CE96A00305AF5 /* DrawerContainerViewController.swift */,
-				0F76EB60232A837400E0DFDB /* DetailViewController.swift */,
+				0FD0A5A3232D1DDB00305AF5 /* DetailTripViewController.swift */,
+				0FD0A5A5232D1E7000305AF5 /* TripPlacesTableViewController.swift */,
+				0F76EB60232A837400E0DFDB /* DetailPlaceViewController.swift */,
 				0F76EB5E232A7F8D00E0DFDB /* Detail.storyboard */,
 			);
 			path = Detail;
@@ -329,15 +335,17 @@
 			files = (
 				0FD0A597232CE97900305AF5 /* MapViewController.swift in Sources */,
 				0FD0A595232CE96A00305AF5 /* DrawerContainerViewController.swift in Sources */,
+				0FD0A5A6232D1E7000305AF5 /* TripPlacesTableViewController.swift in Sources */,
 				0FCFC55822C145230082B924 /* AppDelegate.swift in Sources */,
 				0FD0A59D232CECA600305AF5 /* GooglePlacesAPIManager.swift in Sources */,
+				0FD0A5A4232D1DDB00305AF5 /* DetailTripViewController.swift in Sources */,
 				0F76EB53232A716900E0DFDB /* RootViewController.swift in Sources */,
 				0FD0A59B232CE98900305AF5 /* PulleyManagerViewController.swift in Sources */,
 				0FD0A590232CE89100305AF5 /* Trip.swift in Sources */,
 				0F76EB55232A7D9A00E0DFDB /* MainCoordinator.swift in Sources */,
 				0F20739722F6F40F00BC7383 /* Config.swift in Sources */,
 				0FD0A5A0232D097A00305AF5 /* TripManager.swift in Sources */,
-				0F76EB61232A837400E0DFDB /* DetailViewController.swift in Sources */,
+				0F76EB61232A837400E0DFDB /* DetailPlaceViewController.swift in Sources */,
 				0FD0A5A2232D120B00305AF5 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

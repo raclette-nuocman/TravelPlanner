@@ -17,8 +17,11 @@ class MainCoordinator {
     var pulleyController = PulleyManagerViewController.controller()
     var mapController = MapViewController.controller()
     var detailContainerController = DrawerContainerViewController.controller()
-    var detailController: DetailViewController {
-        return detailContainerController.children.first as! DetailViewController
+    var detailPlaceController: DetailPlaceViewController? {
+        return detailContainerController.currentController as? DetailPlaceViewController
+    }
+    var detailTripController: DetailTripViewController? {
+        return detailContainerController.currentController as? DetailTripViewController
     }
     
     func initViewControllers() {
@@ -26,7 +29,10 @@ class MainCoordinator {
         pulleyController.setDrawerContentViewController(controller: detailContainerController)
         pulleyController.delegate = self
         mapController.delegate = self
-        detailController.delegate = self
+        
+        let tripController = DetailTripViewController.controller()
+        tripController.trip = TripManager.shared.currentTrip
+        detailContainerController.loadController(tripController)
     }
     
     func getPlaceInfos(id: String) {
@@ -34,7 +40,7 @@ class MainCoordinator {
             if let error = error {
                 self?.showError(error)
             } else if let place = place {
-                self?.detailController.place = place
+                self?.detailPlaceController?.place = place
             }
         }
     }
@@ -53,13 +59,14 @@ extension MainCoordinator: PulleyDelegate {
 extension MainCoordinator: MapDelegate {
     
     func map(_ mapController: MapViewController, didSelect pointOfInterest: String, name: String) {
+        let detailPlaceController = DetailPlaceViewController.controller()
+        detailContainerController.loadController(detailPlaceController)
         pulleyController.showPartially()
-        detailController.setTitle(name)
         getPlaceInfos(id: pointOfInterest)
     }
 }
 
-extension MainCoordinator: DetailDelegate {
+extension MainCoordinator: DetailPlaceDelegate {
     
     func addPlaceToTrip(_ place: GMSPlace, completion: @escaping (Bool) -> Void) {
         TripManager.shared.addPlaceToTrip(place: place, trip: TripManager.shared.currentTrip!) { [weak self] (error) in

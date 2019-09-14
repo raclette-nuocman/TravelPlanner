@@ -40,9 +40,6 @@
                                     </view>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6AF-Zd-LDw">
                                         <rect key="frame" x="0.0" y="40" width="414" height="696"/>
-                                        <connections>
-                                            <segue destination="7QR-yI-E5V" kind="embed" id="oJD-Af-4e6"/>
-                                        </connections>
                                     </containerView>
                                 </subviews>
                             </stackView>
@@ -65,12 +62,12 @@
             </objects>
             <point key="canvasLocation" x="354" y="-181"/>
         </scene>
-        <!--Detail View Controller-->
+        <!--Detail Place View Controller-->
         <scene sceneID="dFg-BL-OAT">
             <objects>
-                <tableViewController id="7QR-yI-E5V" customClass="DetailViewController" customModule="TravelPlanner" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="place" id="7QR-yI-E5V" customClass="DetailPlaceViewController" customModule="TravelPlanner" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="0vg-Ch-mno">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="696"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <sections>
@@ -156,6 +153,82 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OtA-Qh-tR5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1376.8115942028987" y="-182.60869565217394"/>
+        </scene>
+        <!--Detail Trip View Controller-->
+        <scene sceneID="mE1-TE-VqF">
+            <objects>
+                <viewController storyboardIdentifier="trip" id="cKW-by-oE3" customClass="DetailTripViewController" customModule="TravelPlanner" customModuleProvider="target" sceneMemberID="viewController">
+                    <stackView key="view" opaque="NO" contentMode="scaleToFill" axis="vertical" id="j1K-Jn-E5C">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="jcq-Jx-xE6">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hbB-5e-wfs">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zZu-K2-T4q">
+                                                <rect key="frame" x="20" y="0.0" width="374" height="50"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="zZu-K2-T4q" secondAttribute="bottom" id="Czf-6T-KWp"/>
+                                            <constraint firstItem="zZu-K2-T4q" firstAttribute="leading" secondItem="hbB-5e-wfs" secondAttribute="leading" constant="20" id="DUY-cO-KMM"/>
+                                            <constraint firstAttribute="trailing" secondItem="zZu-K2-T4q" secondAttribute="trailing" constant="20" id="N0G-X0-VmH"/>
+                                            <constraint firstItem="zZu-K2-T4q" firstAttribute="top" secondItem="hbB-5e-wfs" secondAttribute="top" id="Rji-LN-THl"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f2u-en-ES7">
+                                <rect key="frame" x="0.0" y="50" width="414" height="686"/>
+                                <connections>
+                                    <segue destination="RKv-Yu-Emz" kind="embed" id="9ml-gN-Lzj"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="R1C-6C-xsA"/>
+                    </stackView>
+                    <connections>
+                        <outlet property="tripTitleLabel" destination="zZu-K2-T4q" id="WOp-Qf-YmA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wmk-uJ-vMI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2414" y="-183"/>
+        </scene>
+        <!--Trip Places Table View Controller-->
+        <scene sceneID="hdo-v4-7sj">
+            <objects>
+                <tableViewController id="RKv-Yu-Emz" customClass="TripPlacesTableViewController" customModule="TravelPlanner" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="e7r-pG-zYP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="686"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="placeCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="hDj-OY-HhU">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hDj-OY-HhU" id="SSR-go-cBQ">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="RKv-Yu-Emz" id="v66-Os-57B"/>
+                            <outlet property="delegate" destination="RKv-Yu-Emz" id="6qh-2D-CIC"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AeD-By-yIR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3165" y="-182"/>
         </scene>
     </scenes>
 </document>
