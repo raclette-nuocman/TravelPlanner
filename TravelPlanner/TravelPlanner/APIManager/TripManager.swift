@@ -24,6 +24,7 @@ class TripManager {
     func createNewTrip() -> Trip {
         let newTrip = Trip()
         newTrip.id = UUID().uuidString.lowercased()
+        newTrip.name = "My trip"
         allTrips.append(newTrip)
         return newTrip
     }

@@ -27,7 +27,7 @@ class DetailTripViewController: UIViewController {
     }
     
     func updateUI() {
-        tripTitleLabel.text = trip?.id
+        tripTitleLabel.text = trip?.name
         placeListViewController?.updateUI(with: trip?.places)
     }
     
