@@ -54,6 +54,12 @@ class MapViewController: UIViewController {
         mapView.delegate = self
         view = mapView
     }
+    
+    private func loadMapStyle() {
+        if let styleURL = Bundle.main.url(forResource: "style", withExtension: "json") {
+            mapView?.mapStyle = try! GMSMapStyle(contentsOfFileURL: styleURL)
+        }
+    }
 
     private func initLocationAuthorization() {
         locationManager.delegate = self

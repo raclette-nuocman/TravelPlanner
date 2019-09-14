@@ -14,4 +14,20 @@ class PulleyManagerViewController: PulleyViewController {
     class func controller() -> PulleyManagerViewController {
         return UIStoryboard(name: "Pulley", bundle: nil).instantiateInitialViewController() as! PulleyManagerViewController
     }
+    
+    func showPartially() {
+        setDrawerPosition(position: .partiallyRevealed, animated: true)
+    }
+    
+    func showFully() {
+        setDrawerPosition(position: .open, animated: true)
+    }
+    
+    func collapse() {
+        setDrawerPosition(position: .collapsed, animated: true)
+    }
+    
+    func hide() {
+        setDrawerPosition(position: .closed, animated: true)
+    }
 }

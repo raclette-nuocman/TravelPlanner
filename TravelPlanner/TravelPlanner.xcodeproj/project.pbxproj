@@ -12,16 +12,19 @@
 		0F76EB51232A706C00E0DFDB /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F76EB50232A706C00E0DFDB /* Map.storyboard */; };
 		0F76EB53232A716900E0DFDB /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F76EB52232A716900E0DFDB /* RootViewController.swift */; };
 		0F76EB55232A7D9A00E0DFDB /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F76EB54232A7D9A00E0DFDB /* MainCoordinator.swift */; };
-		0F76EB57232A7E5100E0DFDB /* PulleyManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F76EB56232A7E5100E0DFDB /* PulleyManagerViewController.swift */; };
-		0F76EB59232A7EC800E0DFDB /* Pulley.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F76EB58232A7EC800E0DFDB /* Pulley.storyboard */; };
-		0F76EB5C232A7F6D00E0DFDB /* DrawerContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F76EB5B232A7F6D00E0DFDB /* DrawerContainerViewController.swift */; };
 		0F76EB5F232A7F8D00E0DFDB /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F76EB5E232A7F8D00E0DFDB /* Detail.storyboard */; };
 		0F76EB61232A837400E0DFDB /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F76EB60232A837400E0DFDB /* DetailViewController.swift */; };
+		0F76EB63232AA2F300E0DFDB /* style.json in Resources */ = {isa = PBXBuildFile; fileRef = 0F76EB62232AA2F200E0DFDB /* style.json */; };
 		0FCFC55822C145230082B924 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCFC55722C145230082B924 /* AppDelegate.swift */; };
-		0FCFC55A22C145230082B924 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCFC55922C145230082B924 /* MapViewController.swift */; };
 		0FCFC55D22C145230082B924 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FCFC55B22C145230082B924 /* Main.storyboard */; };
 		0FCFC55F22C145230082B924 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FCFC55E22C145230082B924 /* Assets.xcassets */; };
 		0FCFC56222C145230082B924 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FCFC56022C145230082B924 /* LaunchScreen.storyboard */; };
+		0FD0A590232CE89100305AF5 /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD0A58F232CE89100305AF5 /* Trip.swift */; };
+		0FD0A595232CE96A00305AF5 /* DrawerContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD0A594232CE96A00305AF5 /* DrawerContainerViewController.swift */; };
+		0FD0A597232CE97900305AF5 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD0A596232CE97900305AF5 /* MapViewController.swift */; };
+		0FD0A59A232CE98900305AF5 /* Pulley.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FD0A598232CE98900305AF5 /* Pulley.storyboard */; };
+		0FD0A59B232CE98900305AF5 /* PulleyManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD0A599232CE98900305AF5 /* PulleyManagerViewController.swift */; };
+		0FD0A59D232CECA600305AF5 /* GooglePlacesAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD0A59C232CECA600305AF5 /* GooglePlacesAPIManager.swift */; };
 		3FD2141F90E1C6A884D91877 /* Pods_TravelPlanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A08E7C73B2F6450449901CA8 /* Pods_TravelPlanner.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,18 +34,21 @@
 		0F76EB50232A706C00E0DFDB /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
 		0F76EB52232A716900E0DFDB /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		0F76EB54232A7D9A00E0DFDB /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
-		0F76EB56232A7E5100E0DFDB /* PulleyManagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PulleyManagerViewController.swift; path = ../PulleyManagerViewController.swift; sourceTree = "<group>"; };
-		0F76EB58232A7EC800E0DFDB /* Pulley.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Pulley.storyboard; path = ../Pulley.storyboard; sourceTree = "<group>"; };
-		0F76EB5B232A7F6D00E0DFDB /* DrawerContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DrawerContainerViewController.swift; path = ../DrawerContainerViewController.swift; sourceTree = "<group>"; };
 		0F76EB5E232A7F8D00E0DFDB /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
 		0F76EB60232A837400E0DFDB /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		0F76EB62232AA2F200E0DFDB /* style.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = style.json; sourceTree = "<group>"; };
 		0FCFC55422C145230082B924 /* TravelPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FCFC55722C145230082B924 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0FCFC55922C145230082B924 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = ../MapViewController.swift; sourceTree = "<group>"; };
 		0FCFC55C22C145230082B924 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0FCFC55E22C145230082B924 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0FCFC56122C145230082B924 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0FCFC56322C145230082B924 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0FD0A58F232CE89100305AF5 /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
+		0FD0A594232CE96A00305AF5 /* DrawerContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawerContainerViewController.swift; sourceTree = "<group>"; };
+		0FD0A596232CE97900305AF5 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		0FD0A598232CE98900305AF5 /* Pulley.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Pulley.storyboard; sourceTree = "<group>"; };
+		0FD0A599232CE98900305AF5 /* PulleyManagerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PulleyManagerViewController.swift; sourceTree = "<group>"; };
+		0FD0A59C232CECA600305AF5 /* GooglePlacesAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooglePlacesAPIManager.swift; sourceTree = "<group>"; };
 		4FE23B7CE0B7719510534FCC /* Pods-TravelPlanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelPlanner.debug.xcconfig"; path = "Target Support Files/Pods-TravelPlanner/Pods-TravelPlanner.debug.xcconfig"; sourceTree = "<group>"; };
 		8F14BCC645ECA21AF1750C56 /* Pods-TravelPlanner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelPlanner.release.xcconfig"; path = "Target Support Files/Pods-TravelPlanner/Pods-TravelPlanner.release.xcconfig"; sourceTree = "<group>"; };
 		A08E7C73B2F6450449901CA8 /* Pods_TravelPlanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TravelPlanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,36 +71,37 @@
 			children = (
 				0F20739622F6F40F00BC7383 /* Config.swift */,
 				0F20739922F7073A00BC7383 /* config.json */,
+				0F76EB62232AA2F200E0DFDB /* style.json */,
 			);
 			path = Config;
 			sourceTree = "<group>";
 		};
-		0F76EB4F232A704E00E0DFDB /* New Group */ = {
+		0F76EB4F232A704E00E0DFDB /* Map */ = {
 			isa = PBXGroup;
 			children = (
-				0FCFC55922C145230082B924 /* MapViewController.swift */,
+				0FD0A596232CE97900305AF5 /* MapViewController.swift */,
 				0F76EB50232A706C00E0DFDB /* Map.storyboard */,
 			);
-			path = "New Group";
+			path = Map;
 			sourceTree = "<group>";
 		};
-		0F76EB5A232A7F1300E0DFDB /* New Group1 */ = {
+		0F76EB5A232A7F1300E0DFDB /* Pulley */ = {
 			isa = PBXGroup;
 			children = (
-				0F76EB56232A7E5100E0DFDB /* PulleyManagerViewController.swift */,
-				0F76EB58232A7EC800E0DFDB /* Pulley.storyboard */,
+				0FD0A598232CE98900305AF5 /* Pulley.storyboard */,
+				0FD0A599232CE98900305AF5 /* PulleyManagerViewController.swift */,
 			);
-			path = "New Group1";
+			path = Pulley;
 			sourceTree = "<group>";
 		};
-		0F76EB5D232A7F7A00E0DFDB /* New Group2 */ = {
+		0F76EB5D232A7F7A00E0DFDB /* Detail */ = {
 			isa = PBXGroup;
 			children = (
-				0F76EB5B232A7F6D00E0DFDB /* DrawerContainerViewController.swift */,
+				0FD0A594232CE96A00305AF5 /* DrawerContainerViewController.swift */,
 				0F76EB60232A837400E0DFDB /* DetailViewController.swift */,
 				0F76EB5E232A7F8D00E0DFDB /* Detail.storyboard */,
 			);
-			path = "New Group2";
+			path = Detail;
 			sourceTree = "<group>";
 		};
 		0FCFC54B22C145230082B924 = {
@@ -120,17 +127,43 @@
 			children = (
 				0F20739822F7071200BC7383 /* Config */,
 				0FCFC55722C145230082B924 /* AppDelegate.swift */,
-				0F76EB52232A716900E0DFDB /* RootViewController.swift */,
-				0FCFC55B22C145230082B924 /* Main.storyboard */,
-				0F76EB54232A7D9A00E0DFDB /* MainCoordinator.swift */,
-				0F76EB5D232A7F7A00E0DFDB /* New Group2 */,
-				0F76EB5A232A7F1300E0DFDB /* New Group1 */,
-				0F76EB4F232A704E00E0DFDB /* New Group */,
-				0FCFC55E22C145230082B924 /* Assets.xcassets */,
-				0FCFC56022C145230082B924 /* LaunchScreen.storyboard */,
+				0FD0A59E232CECB200305AF5 /* APIManager */,
+				0FD0A58C232CE81200305AF5 /* UI */,
+				0FD0A591232CE8BF00305AF5 /* Model */,
 				0FCFC56322C145230082B924 /* Info.plist */,
 			);
 			path = TravelPlanner;
+			sourceTree = "<group>";
+		};
+		0FD0A58C232CE81200305AF5 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				0FCFC55B22C145230082B924 /* Main.storyboard */,
+				0F76EB52232A716900E0DFDB /* RootViewController.swift */,
+				0F76EB54232A7D9A00E0DFDB /* MainCoordinator.swift */,
+				0F76EB5D232A7F7A00E0DFDB /* Detail */,
+				0F76EB4F232A704E00E0DFDB /* Map */,
+				0F76EB5A232A7F1300E0DFDB /* Pulley */,
+				0FCFC55E22C145230082B924 /* Assets.xcassets */,
+				0FCFC56022C145230082B924 /* LaunchScreen.storyboard */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		0FD0A591232CE8BF00305AF5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0FD0A58F232CE89100305AF5 /* Trip.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0FD0A59E232CECB200305AF5 /* APIManager */ = {
+			isa = PBXGroup;
+			children = (
+				0FD0A59C232CECA600305AF5 /* GooglePlacesAPIManager.swift */,
+			);
+			path = APIManager;
 			sourceTree = "<group>";
 		};
 		3C78FC7E07FD16CB03F4BDF0 /* Pods */ = {
@@ -214,8 +247,9 @@
 				0FCFC56222C145230082B924 /* LaunchScreen.storyboard in Resources */,
 				0F20739A22F7073A00BC7383 /* config.json in Resources */,
 				0F76EB51232A706C00E0DFDB /* Map.storyboard in Resources */,
-				0F76EB59232A7EC800E0DFDB /* Pulley.storyboard in Resources */,
+				0F76EB63232AA2F300E0DFDB /* style.json in Resources */,
 				0F76EB5F232A7F8D00E0DFDB /* Detail.storyboard in Resources */,
+				0FD0A59A232CE98900305AF5 /* Pulley.storyboard in Resources */,
 				0FCFC55F22C145230082B924 /* Assets.xcassets in Resources */,
 				0FCFC55D22C145230082B924 /* Main.storyboard in Resources */,
 			);
@@ -287,11 +321,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0FCFC55A22C145230082B924 /* MapViewController.swift in Sources */,
+				0FD0A597232CE97900305AF5 /* MapViewController.swift in Sources */,
+				0FD0A595232CE96A00305AF5 /* DrawerContainerViewController.swift in Sources */,
 				0FCFC55822C145230082B924 /* AppDelegate.swift in Sources */,
+				0FD0A59D232CECA600305AF5 /* GooglePlacesAPIManager.swift in Sources */,
 				0F76EB53232A716900E0DFDB /* RootViewController.swift in Sources */,
-				0F76EB5C232A7F6D00E0DFDB /* DrawerContainerViewController.swift in Sources */,
-				0F76EB57232A7E5100E0DFDB /* PulleyManagerViewController.swift in Sources */,
+				0FD0A59B232CE98900305AF5 /* PulleyManagerViewController.swift in Sources */,
+				0FD0A590232CE89100305AF5 /* Trip.swift in Sources */,
 				0F76EB55232A7D9A00E0DFDB /* MainCoordinator.swift in Sources */,
 				0F20739722F6F40F00BC7383 /* Config.swift in Sources */,
 				0F76EB61232A837400E0DFDB /* DetailViewController.swift in Sources */,

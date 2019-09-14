@@ -7,9 +7,16 @@
 //
 
 import UIKit
+import GooglePlaces
 
 class DetailViewController: UITableViewController {
 
+    var place: GMSPlace? {
+        didSet {
+            self.updateInfos()
+        }
+    }
+    
     @IBOutlet var titleLabel: UILabel!
     
     class func controller() -> DetailViewController {
@@ -19,6 +26,14 @@ class DetailViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.backgroundColor = .clear
+        updateInfos()
+    }
+    
+    func updateInfos() {
+        guard let place = place else {
+            return
+        }
+        titleLabel.text = place.name
     }
     
     func setTitle(_ title: String) {
