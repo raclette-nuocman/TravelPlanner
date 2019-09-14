@@ -18,6 +18,7 @@ class DetailViewController: UITableViewController {
     }
     
     @IBOutlet var titleLabel: UILabel!
+    @IBOutlet var addressLabel: UILabel!
     
     class func controller() -> DetailViewController {
         return UIStoryboard(name: "Detail", bundle: nil).instantiateViewController(withIdentifier: "detail") as! DetailViewController
@@ -26,6 +27,7 @@ class DetailViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.backgroundColor = .clear
+        setFakeHeaderView()
         updateInfos()
     }
     
@@ -34,9 +36,16 @@ class DetailViewController: UITableViewController {
             return
         }
         titleLabel.text = place.name
+        addressLabel.text = place.formattedAddress
     }
     
     func setTitle(_ title: String) {
         titleLabel.text = title
+    }
+    
+    func setFakeHeaderView() {
+        let fakeHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 0.5))
+        fakeHeaderView.backgroundColor = .lightGray
+        tableView.tableHeaderView = fakeHeaderView
     }
 }
