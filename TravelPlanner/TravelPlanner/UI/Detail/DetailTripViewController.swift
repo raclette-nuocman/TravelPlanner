@@ -7,9 +7,15 @@
 //
 
 import UIKit
+import GooglePlaces
+
+protocol TripPlaceDelegate: class {
+    func selectPlace(_ place: Place)
+}
 
 class DetailTripViewController: UIViewController {
     
+    weak var delegate: TripPlaceDelegate?
     var trip: Trip?
     
     @IBOutlet var tripTitleLabel: UILabel!
@@ -23,6 +29,7 @@ class DetailTripViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        placeListViewController?.tripController = self
         updateUI()
     }
     

@@ -11,13 +11,14 @@ import GooglePlaces
 
 class TripPlacesTableViewController: UITableViewController {
 
-    var places: [GMSPlace]?
+    var tripController: DetailTripViewController!
+    var places: [Place]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
-    func updateUI(with content: [GMSPlace]?) {
+    func updateUI(with content: [Place]?) {
         places = content
         tableView.backgroundColor = .clear
         tableView.reloadData()
@@ -42,6 +43,12 @@ class TripPlacesTableViewController: UITableViewController {
         return cell
     }
     
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let place = places?[indexPath.row] {
+            tripController.delegate?.selectPlace(place)
+        }
+    }
 
     /*
     // Override to support conditional editing of the table view.
@@ -87,5 +94,8 @@ class TripPlacesTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    
+     
 
 }

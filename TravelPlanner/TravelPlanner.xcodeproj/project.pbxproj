@@ -15,6 +15,7 @@
 		0F76EB5F232A7F8D00E0DFDB /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F76EB5E232A7F8D00E0DFDB /* Detail.storyboard */; };
 		0F76EB61232A837400E0DFDB /* DetailPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F76EB60232A837400E0DFDB /* DetailPlaceViewController.swift */; };
 		0F76EB63232AA2F300E0DFDB /* style.json in Resources */ = {isa = PBXBuildFile; fileRef = 0F76EB62232AA2F200E0DFDB /* style.json */; };
+		0FB6981C2339306800248DD0 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB6981B2339306800248DD0 /* Place.swift */; };
 		0FCFC55822C145230082B924 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCFC55722C145230082B924 /* AppDelegate.swift */; };
 		0FCFC55D22C145230082B924 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FCFC55B22C145230082B924 /* Main.storyboard */; };
 		0FCFC55F22C145230082B924 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FCFC55E22C145230082B924 /* Assets.xcassets */; };
@@ -42,6 +43,7 @@
 		0F76EB5E232A7F8D00E0DFDB /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
 		0F76EB60232A837400E0DFDB /* DetailPlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPlaceViewController.swift; sourceTree = "<group>"; };
 		0F76EB62232AA2F200E0DFDB /* style.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = style.json; sourceTree = "<group>"; };
+		0FB6981B2339306800248DD0 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		0FCFC55422C145230082B924 /* TravelPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FCFC55722C145230082B924 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0FCFC55C22C145230082B924 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				0FD0A58F232CE89100305AF5 /* Trip.swift */,
+				0FB6981B2339306800248DD0 /* Place.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -347,6 +350,7 @@
 				0FD0A590232CE89100305AF5 /* Trip.swift in Sources */,
 				0F76EB55232A7D9A00E0DFDB /* MainCoordinator.swift in Sources */,
 				0F20739722F6F40F00BC7383 /* Config.swift in Sources */,
+				0FB6981C2339306800248DD0 /* Place.swift in Sources */,
 				0FD0A5AB232D44E800305AF5 /* PlaceCell.swift in Sources */,
 				0FD0A5A0232D097A00305AF5 /* TripManager.swift in Sources */,
 				0F76EB61232A837400E0DFDB /* DetailPlaceViewController.swift in Sources */,

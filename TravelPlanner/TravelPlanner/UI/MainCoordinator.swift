@@ -30,6 +30,7 @@ class MainCoordinator {
         mapController.delegate = self
         detailTripController = DetailTripViewController.controller()
         detailTripController.trip = TripManager.shared.currentTrip
+        detailTripController.delegate = self
         showTripController()
     }
     
@@ -78,7 +79,7 @@ extension MainCoordinator: MapDelegate {
 
 extension MainCoordinator: DetailPlaceDelegate {
     
-    func addPlaceToTrip(_ place: GMSPlace, completion: @escaping (Bool) -> Void) {
+    func addPlaceToTrip(_ place: Place, completion: @escaping (Bool) -> Void) {
         TripManager.shared.addPlaceToTrip(place: place, trip: TripManager.shared.currentTrip!) { [weak self] (error) in
             if let error = error {
                 self?.showError(error)
@@ -93,5 +94,13 @@ extension MainCoordinator: DetailPlaceDelegate {
 extension MainCoordinator: ContainerDelegate {
     func backButtonHasBeenPressed() {
         showTripController()
+    }
+}
+
+extension MainCoordinator: TripPlaceDelegate {
+    
+    func selectPlace(_ place: Place) {
+        showPlaceController()
+        detailPlaceController?.place = place
     }
 }

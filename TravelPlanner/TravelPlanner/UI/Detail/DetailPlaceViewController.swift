@@ -11,12 +11,12 @@ import GooglePlaces
 
 protocol DetailPlaceDelegate: class {
     
-    func addPlaceToTrip(_ place: GMSPlace, completion: @escaping (_ succeed: Bool) -> Void)
+    func addPlaceToTrip(_ place: Place, completion: @escaping (_ succeed: Bool) -> Void)
 }
 
 class DetailPlaceViewController: UITableViewController {
 
-    var place: GMSPlace? {
+    var place: Place? {
         didSet {
             self.updateUI()
         }
@@ -68,6 +68,10 @@ class DetailPlaceViewController: UITableViewController {
                 addToTripButton.isEnabled = true
             }
         }
+    }
+    
+    func updateActivityIndicator() {
+        
     }
     
     func showActivityIndicator(_ value: Bool) {

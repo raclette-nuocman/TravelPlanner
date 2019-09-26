@@ -29,7 +29,7 @@ class TripManager {
         return newTrip
     }
     
-    func addPlaceToTrip(place: GMSPlace, trip: Trip, completion: @escaping (Error?) -> Void) {
+    func addPlaceToTrip(place: Place, trip: Trip, completion: @escaping (Error?) -> Void) {
         guard allTrips.map({ $0.id }).contains(trip.id) else {
             let error = NSError.createError(message: "You attempt to add a place to an unknown trip!")
             completion(error)
