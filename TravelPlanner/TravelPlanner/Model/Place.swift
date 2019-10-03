@@ -11,74 +11,81 @@ import GooglePlaces
 
 class Place {
     
-    private var gmsPlace: GMSPlace
+    private var gmsPlace: GMSPlace?
     
-    lazy var placeID: String = {
-        gmsPlace.placeID!
-    }()
+    var placeID: String
     
-    lazy var name: String? = {
-        gmsPlace.name
-    }()
+    var name: String?
     
-    lazy var coordinate: CLLocationCoordinate2D = {
-        gmsPlace.coordinate
+    lazy var coordinate: CLLocationCoordinate2D? = {
+        gmsPlace?.coordinate
     }()
     
     lazy var formattedAddress: String? = {
-        gmsPlace.formattedAddress
+        gmsPlace?.formattedAddress
     }()
     
     lazy var phoneNumber: String? = {
-        gmsPlace.phoneNumber
+        gmsPlace?.phoneNumber
     }()
     
-    lazy var rating: Float = {
-        gmsPlace.rating
+    lazy var rating: Float? = {
+        gmsPlace?.rating
     }()
     
-    lazy var priceLevel: GMSPlacesPriceLevel = {
-        gmsPlace.priceLevel
+    lazy var priceLevel: GMSPlacesPriceLevel? = {
+        gmsPlace?.priceLevel
     }()
     
     lazy var types: [String]? = {
-        gmsPlace.types
+        gmsPlace?.types
     }()
     
     lazy var webSite: URL? = {
-        gmsPlace.website
+        gmsPlace?.website
     }()
     
     lazy var attributions: NSAttributedString? = {
-        gmsPlace.attributions
+        gmsPlace?.attributions
     }()
     
     lazy var viewport: GMSCoordinateBounds? = {
-        gmsPlace.viewport
+        gmsPlace?.viewport
     }()
     
     lazy var addressComponents: [GMSAddressComponent]? = {
-        gmsPlace.addressComponents
+        gmsPlace?.addressComponents
     }()
     
     lazy var plusCode: GMSPlusCode? = {
-        gmsPlace.plusCode
+        gmsPlace?.plusCode
     }()
     
     lazy var openingHours: GMSOpeningHours? = {
-        gmsPlace.openingHours
+        gmsPlace?.openingHours
     }()
     
-    lazy var userRatingsTotal: UInt = {
-        gmsPlace.userRatingsTotal
+    lazy var userRatingsTotal: UInt? = {
+        gmsPlace?.userRatingsTotal
     }()
     
     lazy var photos: [GMSPlacePhotoMetadata]? = {
-        gmsPlace.photos
+        gmsPlace?.photos
     }()
     
     init(from place: GMSPlace) {
         self.gmsPlace = place
+        self.name = place.name
+        self.placeID = place.placeID!
+    }
+    
+    init(id: String, name: String?) {
+        self.placeID = id
+        self.name = name
+    }
+    
+    var isComplete: Bool {
+        return formattedAddress != nil
     }
 }
 

@@ -39,19 +39,18 @@ class MainCoordinator {
         detailTripController.updateUI()
     }
     
-    func showPlaceController() {
-        let detailPlaceController = DetailPlaceViewController.controller()
+    func showPlaceController(for place: Place) {
+        let detailPlaceController = DetailPlaceViewController.controller(for: place)
         detailPlaceController.delegate = self
         detailContainerController.loadController(detailPlaceController)
     }
     
-    func getPlaceInfos(id: String) {
-        GooglePlacesAPIManager.shared.getPlace(id: id) { [weak self] (place, error) in
+    func getPlaceInfos(_ place: Place) {
+        GooglePlacesAPIManager.shared.getPlace(id: place.placeID) { [weak self] (gmsPlace, error) in
             if let error = error {
                 self?.showError(error)
-            } else if let place = place {
+            } else if let gmsPlace = gmsPlace {
                 self?.detailPlaceController?.place = place
-                self?.detailPlaceController?.showActivityIndicator(false)
             }
         }
     }
@@ -70,8 +69,8 @@ extension MainCoordinator: PulleyDelegate {
 extension MainCoordinator: MapDelegate {
     
     func map(_ mapController: MapViewController, didSelect pointOfInterest: String, name: String) {
-        showPlaceController()
-        detailPlaceController?.showActivityIndicator(true)
+        let place = Place(id: pointOfInterest, name: name)
+        showPlaceController(for: place)
         pulleyController.showPartially()
         getPlaceInfos(id: pointOfInterest)
     }
@@ -100,7 +99,6 @@ extension MainCoordinator: ContainerDelegate {
 extension MainCoordinator: TripPlaceDelegate {
     
     func selectPlace(_ place: Place) {
-        showPlaceController()
-        detailPlaceController?.place = place
+        showPlaceController(for: place)
     }
 }

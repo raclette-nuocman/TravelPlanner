@@ -16,7 +16,7 @@ protocol DetailPlaceDelegate: class {
 
 class DetailPlaceViewController: UITableViewController {
 
-    var place: Place? {
+    var place: Place! {
         didSet {
             self.updateUI()
         }
@@ -31,7 +31,7 @@ class DetailPlaceViewController: UITableViewController {
     @IBOutlet var cellsToHideDuringLoading: [UITableViewCell]!
     @IBOutlet var activityIndicator: UIActivityIndicatorView!
     
-    class func controller() -> DetailPlaceViewController {
+    class func controller(for place: Place) -> DetailPlaceViewController {
         return UIStoryboard(name: "Detail", bundle: nil).instantiateViewController(withIdentifier: "place") as! DetailPlaceViewController
     }
     
@@ -49,6 +49,7 @@ class DetailPlaceViewController: UITableViewController {
         titleLabel.text = place.name
         addressLabel.text = place.formattedAddress
         updateAddToTripButton()
+        updateActivityIndicator()
     }
     
     func updateAddToTripButton() {
@@ -71,15 +72,12 @@ class DetailPlaceViewController: UITableViewController {
     }
     
     func updateActivityIndicator() {
-        
-    }
-    
-    func showActivityIndicator(_ value: Bool) {
-        activityIndicator.isHidden = !value
+        let shoudActivityIndicatorBeVisible = !place.isComplete
+        activityIndicator.isHidden = !shoudActivityIndicatorBeVisible
         cellsToHideDuringLoading.forEach { (cell) in
-            cell.isHidden = value
+            cell.isHidden = shoudActivityIndicatorBeVisible
         }
-        addToTripButton.isHidden = value
+        addToTripButton.isHidden = shoudActivityIndicatorBeVisible
     }
     
     @IBAction func addToTripButtonHasBeenPressed(_ sender: UIButton) {
