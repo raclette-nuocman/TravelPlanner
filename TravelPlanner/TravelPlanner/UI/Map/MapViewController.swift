@@ -68,6 +68,10 @@ class MapViewController: UIViewController {
         locationManager.distanceFilter = 50
         locationManager.startUpdatingLocation()
     }
+    
+    func selectPlace(at location: CLLocationCoordinate2D) {
+        zoom(to: location)
+    }
 
     private func zoom(to location: CLLocationCoordinate2D) {
         let camera = GMSCameraPosition.camera(withTarget: location, zoom: 15)
@@ -87,7 +91,7 @@ extension MapViewController: CLLocationManagerDelegate {
 extension MapViewController: GMSMapViewDelegate {
     
     func mapView(_ mapView: GMSMapView, didTapPOIWithPlaceID placeID: String, name: String, location: CLLocationCoordinate2D) {
-        zoom(to: location)
+        selectPlace(at: location)
         delegate?.map(self, didSelect: placeID, name: name)
     }
 }

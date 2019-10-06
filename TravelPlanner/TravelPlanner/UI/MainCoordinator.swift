@@ -99,6 +99,9 @@ extension MainCoordinator: ContainerDelegate {
 extension MainCoordinator: TripPlaceDelegate {
     
     func selectPlace(_ place: Place) {
+        if let location = place.coordinate {
+            mapController.selectPlace(at: location)            
+        }
         showPlaceController(for: place)
     }
 }
