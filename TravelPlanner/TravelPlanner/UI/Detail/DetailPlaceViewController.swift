@@ -16,11 +16,7 @@ protocol DetailPlaceDelegate: class {
 
 class DetailPlaceViewController: UITableViewController {
 
-    var place: Place! {
-        didSet {
-            self.updateUI()
-        }
-    }
+    var place: Place!
     
     weak var delegate: DetailPlaceDelegate?
     
@@ -32,7 +28,9 @@ class DetailPlaceViewController: UITableViewController {
     @IBOutlet var activityIndicator: UIActivityIndicatorView!
     
     class func controller(for place: Place) -> DetailPlaceViewController {
-        return UIStoryboard(name: "Detail", bundle: nil).instantiateViewController(withIdentifier: "place") as! DetailPlaceViewController
+        let controller = UIStoryboard(name: "Detail", bundle: nil).instantiateViewController(withIdentifier: "place") as! DetailPlaceViewController
+        controller.place = place
+        return controller
     }
     
     override func viewDidLoad() {
@@ -42,7 +40,12 @@ class DetailPlaceViewController: UITableViewController {
         updateUI()
     }
     
-    func updateUI() {
+    func updatePlace(_ gmsPlace: GMSPlace) {
+        place.update(with: gmsPlace)
+        updateUI()
+    }
+    
+    private func updateUI() {
         guard let place = place else {
             return
         }
@@ -52,7 +55,7 @@ class DetailPlaceViewController: UITableViewController {
         updateActivityIndicator()
     }
     
-    func updateAddToTripButton() {
+    private func updateAddToTripButton() {
         addToTripButton.layer.cornerRadius = addToTripButton.frame.height / 2
         guard let place = place else {
             return
@@ -71,7 +74,7 @@ class DetailPlaceViewController: UITableViewController {
         }
     }
     
-    func updateActivityIndicator() {
+    private func updateActivityIndicator() {
         let shoudActivityIndicatorBeVisible = !place.isComplete
         activityIndicator.isHidden = !shoudActivityIndicatorBeVisible
         cellsToHideDuringLoading.forEach { (cell) in
@@ -89,7 +92,7 @@ class DetailPlaceViewController: UITableViewController {
         }
     }
     
-    func setFakeHeaderView() {
+    private func setFakeHeaderView() {
         let fakeHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 0.5))
         fakeHeaderView.backgroundColor = .clear
         tableView.tableHeaderView = fakeHeaderView

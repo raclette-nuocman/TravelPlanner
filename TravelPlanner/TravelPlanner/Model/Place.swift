@@ -17,61 +17,61 @@ class Place {
     
     var name: String?
     
-    lazy var coordinate: CLLocationCoordinate2D? = {
+    var coordinate: CLLocationCoordinate2D? {
         gmsPlace?.coordinate
-    }()
+    }
     
-    lazy var formattedAddress: String? = {
+    var formattedAddress: String? {
         gmsPlace?.formattedAddress
-    }()
+    }
     
-    lazy var phoneNumber: String? = {
+    var phoneNumber: String? {
         gmsPlace?.phoneNumber
-    }()
+    }
     
-    lazy var rating: Float? = {
+    var rating: Float? {
         gmsPlace?.rating
-    }()
+    }
     
-    lazy var priceLevel: GMSPlacesPriceLevel? = {
+    var priceLevel: GMSPlacesPriceLevel? {
         gmsPlace?.priceLevel
-    }()
+    }
     
-    lazy var types: [String]? = {
+    var types: [String]? {
         gmsPlace?.types
-    }()
+    }
     
-    lazy var webSite: URL? = {
+    var webSite: URL? {
         gmsPlace?.website
-    }()
+    }
     
-    lazy var attributions: NSAttributedString? = {
+    var attributions: NSAttributedString? {
         gmsPlace?.attributions
-    }()
+    }
     
-    lazy var viewport: GMSCoordinateBounds? = {
+    var viewport: GMSCoordinateBounds? {
         gmsPlace?.viewport
-    }()
+    }
     
-    lazy var addressComponents: [GMSAddressComponent]? = {
+    var addressComponents: [GMSAddressComponent]? {
         gmsPlace?.addressComponents
-    }()
+    }
     
-    lazy var plusCode: GMSPlusCode? = {
+    var plusCode: GMSPlusCode? {
         gmsPlace?.plusCode
-    }()
+    }
     
-    lazy var openingHours: GMSOpeningHours? = {
+    var openingHours: GMSOpeningHours? {
         gmsPlace?.openingHours
-    }()
+    }
     
-    lazy var userRatingsTotal: UInt? = {
+    var userRatingsTotal: UInt? {
         gmsPlace?.userRatingsTotal
-    }()
+    }
     
-    lazy var photos: [GMSPlacePhotoMetadata]? = {
+    var photos: [GMSPlacePhotoMetadata]? {
         gmsPlace?.photos
-    }()
+    }
     
     init(from place: GMSPlace) {
         self.gmsPlace = place
@@ -82,6 +82,10 @@ class Place {
     init(id: String, name: String?) {
         self.placeID = id
         self.name = name
+    }
+    
+    func update(with gmsPlace: GMSPlace) {
+        self.gmsPlace = gmsPlace
     }
     
     var isComplete: Bool {

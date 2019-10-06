@@ -50,7 +50,7 @@ class MainCoordinator {
             if let error = error {
                 self?.showError(error)
             } else if let gmsPlace = gmsPlace {
-                self?.detailPlaceController?.place = place
+                self?.detailPlaceController?.updatePlace(gmsPlace)
             }
         }
     }
@@ -72,7 +72,7 @@ extension MainCoordinator: MapDelegate {
         let place = Place(id: pointOfInterest, name: name)
         showPlaceController(for: place)
         pulleyController.showPartially()
-        getPlaceInfos(id: pointOfInterest)
+        getPlaceInfos(place)
     }
 }
 
