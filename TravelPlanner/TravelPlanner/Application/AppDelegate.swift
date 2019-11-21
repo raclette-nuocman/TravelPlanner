@@ -13,13 +13,22 @@ import GooglePlaces
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    var window: UIWindow?
-
+    let rootCoordinator: RootCoordinator = RootCoordinator()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        GMSServices.provideAPIKey(Google.apiKey ?? "")
-        GMSPlacesClient.provideAPIKey(Google.apiKey ?? "")
+        initGooglePlaces()
+        initRootCoordinator()
         return true
     }
+    
+    private func initGooglePlaces() {
+        GMSServices.provideAPIKey(Google.apiKey ?? "")
+        GMSPlacesClient.provideAPIKey(Google.apiKey ?? "")
+    }
+    
+    private func initRootCoordinator() {
+        rootCoordinator.start()
+    }
+
 }
 

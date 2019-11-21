@@ -60,7 +60,7 @@ class DetailPlaceViewController: UITableViewController {
         guard let place = place else {
             return
         }
-        if let trip = TripManager.shared.currentTrip {
+        if let trip = RealmTripDataSource().currentTrip {
             addToTripButton.isHidden = false
             if trip.places.contains(place) {
                 addToTripButton.setTitle("Added", for: .normal)

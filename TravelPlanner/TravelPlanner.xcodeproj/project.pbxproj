@@ -8,25 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		0F20739722F6F40F00BC7383 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F20739622F6F40F00BC7383 /* Config.swift */; };
-		0F76EB51232A706C00E0DFDB /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F76EB50232A706C00E0DFDB /* Map.storyboard */; };
-		0F76EB53232A716900E0DFDB /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F76EB52232A716900E0DFDB /* RootViewController.swift */; };
-		0F76EB55232A7D9A00E0DFDB /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F76EB54232A7D9A00E0DFDB /* MainCoordinator.swift */; };
-		0F76EB5F232A7F8D00E0DFDB /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F76EB5E232A7F8D00E0DFDB /* Detail.storyboard */; };
 		0F76EB61232A837400E0DFDB /* DetailPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F76EB60232A837400E0DFDB /* DetailPlaceViewController.swift */; };
 		0F76EB63232AA2F300E0DFDB /* style.json in Resources */ = {isa = PBXBuildFile; fileRef = 0F76EB62232AA2F200E0DFDB /* style.json */; };
+		0F9E254A238703F7009852D7 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9E2549238703F7009852D7 /* Coordinator.swift */; };
+		0F9E254D2387041F009852D7 /* RootCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9E254C2387041F009852D7 /* RootCoordinator.swift */; };
+		0F9E255123870545009852D7 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9E255023870545009852D7 /* HomeCoordinator.swift */; };
+		0F9E255323870A33009852D7 /* MapCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9E255223870A33009852D7 /* MapCoordinator.swift */; };
+		0F9E255523870E02009852D7 /* DetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9E255423870E02009852D7 /* DetailCoordinator.swift */; };
+		0F9E255723870E90009852D7 /* TripListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9E255623870E90009852D7 /* TripListTableViewController.swift */; };
+		0F9E255B238710B1009852D7 /* TripDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9E255A238710B1009852D7 /* TripDataSource.swift */; };
+		0F9E255E238712C8009852D7 /* ModuleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9E255D238712C8009852D7 /* ModuleModel.swift */; };
+		0F9E256323871564009852D7 /* PlaceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9E256223871564009852D7 /* PlaceManager.swift */; };
+		0F9E256923871819009852D7 /* RealmTripDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9E256823871819009852D7 /* RealmTripDataSource.swift */; };
+		0F9E256D23871AE9009852D7 /* TripListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9E256B23871AE9009852D7 /* TripListTableViewCell.swift */; };
+		0F9E256E23871AE9009852D7 /* TripListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F9E256C23871AE9009852D7 /* TripListTableViewCell.xib */; };
 		0FB6981C2339306800248DD0 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB6981B2339306800248DD0 /* Place.swift */; };
 		0FCFC55822C145230082B924 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCFC55722C145230082B924 /* AppDelegate.swift */; };
-		0FCFC55D22C145230082B924 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FCFC55B22C145230082B924 /* Main.storyboard */; };
 		0FCFC55F22C145230082B924 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FCFC55E22C145230082B924 /* Assets.xcassets */; };
 		0FCFC56222C145230082B924 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FCFC56022C145230082B924 /* LaunchScreen.storyboard */; };
 		0FD0A590232CE89100305AF5 /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD0A58F232CE89100305AF5 /* Trip.swift */; };
-		0FD0A595232CE96A00305AF5 /* DrawerContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD0A594232CE96A00305AF5 /* DrawerContainerViewController.swift */; };
 		0FD0A597232CE97900305AF5 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD0A596232CE97900305AF5 /* MapViewController.swift */; };
-		0FD0A59A232CE98900305AF5 /* Pulley.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FD0A598232CE98900305AF5 /* Pulley.storyboard */; };
-		0FD0A59B232CE98900305AF5 /* PulleyManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD0A599232CE98900305AF5 /* PulleyManagerViewController.swift */; };
+		0FD0A59B232CE98900305AF5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD0A599232CE98900305AF5 /* HomeViewController.swift */; };
 		0FD0A59D232CECA600305AF5 /* GooglePlacesAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD0A59C232CECA600305AF5 /* GooglePlacesAPIManager.swift */; };
-		0FD0A5A0232D097A00305AF5 /* TripManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD0A59F232D097A00305AF5 /* TripManager.swift */; };
-		0FD0A5A2232D120B00305AF5 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD0A5A1232D120B00305AF5 /* Utils.swift */; };
+		0FD0A5A2232D120B00305AF5 /* ErrorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD0A5A1232D120B00305AF5 /* ErrorExtension.swift */; };
 		0FD0A5A4232D1DDB00305AF5 /* DetailTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD0A5A3232D1DDB00305AF5 /* DetailTripViewController.swift */; };
 		0FD0A5A6232D1E7000305AF5 /* TripPlacesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD0A5A5232D1E7000305AF5 /* TripPlacesTableViewController.swift */; };
 		0FD0A5AB232D44E800305AF5 /* PlaceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD0A5AA232D44E800305AF5 /* PlaceCell.swift */; };
@@ -36,27 +40,31 @@
 
 /* Begin PBXFileReference section */
 		0F20739622F6F40F00BC7383 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
-		0F76EB50232A706C00E0DFDB /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
-		0F76EB52232A716900E0DFDB /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
-		0F76EB54232A7D9A00E0DFDB /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
-		0F76EB5E232A7F8D00E0DFDB /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
 		0F76EB60232A837400E0DFDB /* DetailPlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPlaceViewController.swift; sourceTree = "<group>"; };
 		0F76EB62232AA2F200E0DFDB /* style.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = style.json; sourceTree = "<group>"; };
+		0F9E2549238703F7009852D7 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		0F9E254C2387041F009852D7 /* RootCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCoordinator.swift; sourceTree = "<group>"; };
+		0F9E255023870545009852D7 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		0F9E255223870A33009852D7 /* MapCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapCoordinator.swift; sourceTree = "<group>"; };
+		0F9E255423870E02009852D7 /* DetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCoordinator.swift; sourceTree = "<group>"; };
+		0F9E255623870E90009852D7 /* TripListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripListTableViewController.swift; sourceTree = "<group>"; };
+		0F9E255A238710B1009852D7 /* TripDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDataSource.swift; sourceTree = "<group>"; };
+		0F9E255D238712C8009852D7 /* ModuleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleModel.swift; sourceTree = "<group>"; };
+		0F9E256223871564009852D7 /* PlaceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceManager.swift; sourceTree = "<group>"; };
+		0F9E256823871819009852D7 /* RealmTripDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmTripDataSource.swift; sourceTree = "<group>"; };
+		0F9E256B23871AE9009852D7 /* TripListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripListTableViewCell.swift; sourceTree = "<group>"; };
+		0F9E256C23871AE9009852D7 /* TripListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TripListTableViewCell.xib; sourceTree = "<group>"; };
 		0FB6981B2339306800248DD0 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		0FCFC55422C145230082B924 /* TravelPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FCFC55722C145230082B924 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0FCFC55C22C145230082B924 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0FCFC55E22C145230082B924 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0FCFC56122C145230082B924 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0FCFC56322C145230082B924 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0FD0A58F232CE89100305AF5 /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
-		0FD0A594232CE96A00305AF5 /* DrawerContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawerContainerViewController.swift; sourceTree = "<group>"; };
 		0FD0A596232CE97900305AF5 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		0FD0A598232CE98900305AF5 /* Pulley.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Pulley.storyboard; sourceTree = "<group>"; };
-		0FD0A599232CE98900305AF5 /* PulleyManagerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PulleyManagerViewController.swift; sourceTree = "<group>"; };
+		0FD0A599232CE98900305AF5 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		0FD0A59C232CECA600305AF5 /* GooglePlacesAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooglePlacesAPIManager.swift; sourceTree = "<group>"; };
-		0FD0A59F232D097A00305AF5 /* TripManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripManager.swift; sourceTree = "<group>"; };
-		0FD0A5A1232D120B00305AF5 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		0FD0A5A1232D120B00305AF5 /* ErrorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorExtension.swift; sourceTree = "<group>"; };
 		0FD0A5A3232D1DDB00305AF5 /* DetailTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTripViewController.swift; sourceTree = "<group>"; };
 		0FD0A5A5232D1E7000305AF5 /* TripPlacesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripPlacesTableViewController.swift; sourceTree = "<group>"; };
 		0FD0A5AA232D44E800305AF5 /* PlaceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceCell.swift; sourceTree = "<group>"; };
@@ -92,7 +100,6 @@
 			isa = PBXGroup;
 			children = (
 				0FD0A596232CE97900305AF5 /* MapViewController.swift */,
-				0F76EB50232A706C00E0DFDB /* Map.storyboard */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -100,8 +107,7 @@
 		0F76EB5A232A7F1300E0DFDB /* Pulley */ = {
 			isa = PBXGroup;
 			children = (
-				0FD0A598232CE98900305AF5 /* Pulley.storyboard */,
-				0FD0A599232CE98900305AF5 /* PulleyManagerViewController.swift */,
+				0FD0A599232CE98900305AF5 /* HomeViewController.swift */,
 			);
 			path = Pulley;
 			sourceTree = "<group>";
@@ -109,14 +115,125 @@
 		0F76EB5D232A7F7A00E0DFDB /* Detail */ = {
 			isa = PBXGroup;
 			children = (
-				0FD0A594232CE96A00305AF5 /* DrawerContainerViewController.swift */,
+				0F9E256A23871AD2009852D7 /* Trip List */,
 				0FD0A5A3232D1DDB00305AF5 /* DetailTripViewController.swift */,
 				0FD0A5A5232D1E7000305AF5 /* TripPlacesTableViewController.swift */,
 				0F76EB60232A837400E0DFDB /* DetailPlaceViewController.swift */,
 				0FD0A5AA232D44E800305AF5 /* PlaceCell.swift */,
-				0F76EB5E232A7F8D00E0DFDB /* Detail.storyboard */,
 			);
 			path = Detail;
+			sourceTree = "<group>";
+		};
+		0F9E254623870382009852D7 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				0F20739822F7071200BC7383 /* Config */,
+				0FCFC55722C145230082B924 /* AppDelegate.swift */,
+				0FCFC56022C145230082B924 /* LaunchScreen.storyboard */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		0F9E2547238703A5009852D7 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				0FD0A5A1232D120B00305AF5 /* ErrorExtension.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		0F9E2548238703DC009852D7 /* Ressources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Ressources;
+			sourceTree = "<group>";
+		};
+		0F9E254B238703FF009852D7 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				0F9E2549238703F7009852D7 /* Coordinator.swift */,
+				0F9E254E23870422009852D7 /* Root */,
+				0F9E254F238704FD009852D7 /* Home */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		0F9E254E23870422009852D7 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				0F9E254C2387041F009852D7 /* RootCoordinator.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		0F9E254F238704FD009852D7 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				0F9E255023870545009852D7 /* HomeCoordinator.swift */,
+				0F9E255223870A33009852D7 /* MapCoordinator.swift */,
+				0F9E255423870E02009852D7 /* DetailCoordinator.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		0F9E255823871042009852D7 /* ModuleInterfaces */ = {
+			isa = PBXGroup;
+			children = (
+				0F9E255923871054009852D7 /* DataSources */,
+				0F9E255C238712AC009852D7 /* ModuleModel */,
+				0F9E255F238713CA009852D7 /* Interfaces */,
+			);
+			path = ModuleInterfaces;
+			sourceTree = "<group>";
+		};
+		0F9E255923871054009852D7 /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+				0F9E255A238710B1009852D7 /* TripDataSource.swift */,
+			);
+			path = DataSources;
+			sourceTree = "<group>";
+		};
+		0F9E255C238712AC009852D7 /* ModuleModel */ = {
+			isa = PBXGroup;
+			children = (
+				0F9E255D238712C8009852D7 /* ModuleModel.swift */,
+			);
+			path = ModuleModel;
+			sourceTree = "<group>";
+		};
+		0F9E255F238713CA009852D7 /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				0F9E256223871564009852D7 /* PlaceManager.swift */,
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		0F9E256423871661009852D7 /* APIModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = APIModel;
+			sourceTree = "<group>";
+		};
+		0F9E256723871801009852D7 /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+				0F9E256823871819009852D7 /* RealmTripDataSource.swift */,
+			);
+			path = DataSources;
+			sourceTree = "<group>";
+		};
+		0F9E256A23871AD2009852D7 /* Trip List */ = {
+			isa = PBXGroup;
+			children = (
+				0F9E255623870E90009852D7 /* TripListTableViewController.swift */,
+				0F9E256B23871AE9009852D7 /* TripListTableViewCell.swift */,
+				0F9E256C23871AE9009852D7 /* TripListTableViewCell.xib */,
+			);
+			path = "Trip List";
 			sourceTree = "<group>";
 		};
 		0FCFC54B22C145230082B924 = {
@@ -140,13 +257,15 @@
 		0FCFC55622C145230082B924 /* TravelPlanner */ = {
 			isa = PBXGroup;
 			children = (
-				0F20739822F7071200BC7383 /* Config */,
-				0FCFC55722C145230082B924 /* AppDelegate.swift */,
-				0FD0A5A1232D120B00305AF5 /* Utils.swift */,
-				0FD0A59E232CECB200305AF5 /* APIManager */,
+				0F9E254623870382009852D7 /* Application */,
+				0F9E254B238703FF009852D7 /* Coordinators */,
 				0FD0A58C232CE81200305AF5 /* UI */,
 				0FD0A591232CE8BF00305AF5 /* Model */,
+				0F9E255823871042009852D7 /* ModuleInterfaces */,
+				0FD0A59E232CECB200305AF5 /* Modules */,
+				0F9E2547238703A5009852D7 /* Utils */,
 				0FCFC56322C145230082B924 /* Info.plist */,
+				0F9E2548238703DC009852D7 /* Ressources */,
 			);
 			path = TravelPlanner;
 			sourceTree = "<group>";
@@ -154,14 +273,10 @@
 		0FD0A58C232CE81200305AF5 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				0FCFC55B22C145230082B924 /* Main.storyboard */,
-				0F76EB52232A716900E0DFDB /* RootViewController.swift */,
-				0F76EB54232A7D9A00E0DFDB /* MainCoordinator.swift */,
 				0F76EB5D232A7F7A00E0DFDB /* Detail */,
 				0F76EB4F232A704E00E0DFDB /* Map */,
 				0F76EB5A232A7F1300E0DFDB /* Pulley */,
 				0FCFC55E22C145230082B924 /* Assets.xcassets */,
-				0FCFC56022C145230082B924 /* LaunchScreen.storyboard */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -175,13 +290,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		0FD0A59E232CECB200305AF5 /* APIManager */ = {
+		0FD0A59E232CECB200305AF5 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				0F9E256723871801009852D7 /* DataSources */,
+				0F9E256423871661009852D7 /* APIModel */,
 				0FD0A59C232CECA600305AF5 /* GooglePlacesAPIManager.swift */,
-				0FD0A59F232D097A00305AF5 /* TripManager.swift */,
 			);
-			path = APIManager;
+			path = Modules;
 			sourceTree = "<group>";
 		};
 		3C78FC7E07FD16CB03F4BDF0 /* Pods */ = {
@@ -212,8 +328,8 @@
 				0FCFC55022C145230082B924 /* Sources */,
 				0FCFC55122C145230082B924 /* Frameworks */,
 				0FCFC55222C145230082B924 /* Resources */,
-				990148DB18782411945A82C1 /* [CP] Embed Pods Frameworks */,
 				39AAE3E5D6CDF6D20E4B94D7 /* [CP] Copy Pods Resources */,
+				6BD8C3C98CBA05AEE134AA62 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -264,12 +380,9 @@
 			files = (
 				0FCFC56222C145230082B924 /* LaunchScreen.storyboard in Resources */,
 				0FDAEFB92349EE4000B3462A /* config.json in Resources */,
-				0F76EB51232A706C00E0DFDB /* Map.storyboard in Resources */,
+				0F9E256E23871AE9009852D7 /* TripListTableViewCell.xib in Resources */,
 				0F76EB63232AA2F300E0DFDB /* style.json in Resources */,
-				0F76EB5F232A7F8D00E0DFDB /* Detail.storyboard in Resources */,
-				0FD0A59A232CE98900305AF5 /* Pulley.storyboard in Resources */,
 				0FCFC55F22C145230082B924 /* Assets.xcassets in Resources */,
-				0FCFC55D22C145230082B924 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,7 +406,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TravelPlanner/Pods-TravelPlanner-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		990148DB18782411945A82C1 /* [CP] Embed Pods Frameworks */ = {
+		6BD8C3C98CBA05AEE134AA62 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -340,35 +453,34 @@
 			buildActionMask = 2147483647;
 			files = (
 				0FD0A597232CE97900305AF5 /* MapViewController.swift in Sources */,
-				0FD0A595232CE96A00305AF5 /* DrawerContainerViewController.swift in Sources */,
+				0F9E255723870E90009852D7 /* TripListTableViewController.swift in Sources */,
 				0FD0A5A6232D1E7000305AF5 /* TripPlacesTableViewController.swift in Sources */,
 				0FCFC55822C145230082B924 /* AppDelegate.swift in Sources */,
 				0FD0A59D232CECA600305AF5 /* GooglePlacesAPIManager.swift in Sources */,
+				0F9E256D23871AE9009852D7 /* TripListTableViewCell.swift in Sources */,
 				0FD0A5A4232D1DDB00305AF5 /* DetailTripViewController.swift in Sources */,
-				0F76EB53232A716900E0DFDB /* RootViewController.swift in Sources */,
-				0FD0A59B232CE98900305AF5 /* PulleyManagerViewController.swift in Sources */,
+				0FD0A59B232CE98900305AF5 /* HomeViewController.swift in Sources */,
+				0F9E256923871819009852D7 /* RealmTripDataSource.swift in Sources */,
 				0FD0A590232CE89100305AF5 /* Trip.swift in Sources */,
-				0F76EB55232A7D9A00E0DFDB /* MainCoordinator.swift in Sources */,
+				0F9E255323870A33009852D7 /* MapCoordinator.swift in Sources */,
+				0F9E255B238710B1009852D7 /* TripDataSource.swift in Sources */,
+				0F9E254A238703F7009852D7 /* Coordinator.swift in Sources */,
+				0F9E256323871564009852D7 /* PlaceManager.swift in Sources */,
 				0F20739722F6F40F00BC7383 /* Config.swift in Sources */,
 				0FB6981C2339306800248DD0 /* Place.swift in Sources */,
+				0F9E255523870E02009852D7 /* DetailCoordinator.swift in Sources */,
+				0F9E255E238712C8009852D7 /* ModuleModel.swift in Sources */,
 				0FD0A5AB232D44E800305AF5 /* PlaceCell.swift in Sources */,
-				0FD0A5A0232D097A00305AF5 /* TripManager.swift in Sources */,
 				0F76EB61232A837400E0DFDB /* DetailPlaceViewController.swift in Sources */,
-				0FD0A5A2232D120B00305AF5 /* Utils.swift in Sources */,
+				0F9E254D2387041F009852D7 /* RootCoordinator.swift in Sources */,
+				0FD0A5A2232D120B00305AF5 /* ErrorExtension.swift in Sources */,
+				0F9E255123870545009852D7 /* HomeCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		0FCFC55B22C145230082B924 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0FCFC55C22C145230082B924 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		0FCFC56022C145230082B924 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

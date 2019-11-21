@@ -9,10 +9,10 @@
 import UIKit
 import Pulley
 
-class PulleyManagerViewController: PulleyViewController {
+class HomeViewController: PulleyViewController {
     
-    class func controller() -> PulleyManagerViewController {
-        return UIStoryboard(name: "Pulley", bundle: nil).instantiateInitialViewController() as! PulleyManagerViewController
+    convenience init() {
+        self.init(contentViewController: UIViewController(), drawerViewController: UIViewController())
     }
     
     func showPartially() {

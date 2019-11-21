@@ -25,6 +25,8 @@ class MapViewController: UIViewController {
         return view as? GMSMapView
     }
     
+    var deinitBlock: (() -> Void)?
+    
     private var userLocation: CLLocation? {
         didSet {
             if oldValue == nil, let location = userLocation {
@@ -32,10 +34,14 @@ class MapViewController: UIViewController {
             }
         }
     }
-
-    class func controller() -> MapViewController {
-        let controller = UIStoryboard(name: "Map", bundle: nil).instantiateInitialViewController() as! MapViewController
-        return controller
+    
+    convenience init(deinitBlock: @escaping () -> Void) {
+        self.init(nibName: nil, bundle: nil)
+        self.deinitBlock = deinitBlock
+    }
+    
+    deinit {
+        deinitBlock?()
     }
     
     override func viewDidLoad() {

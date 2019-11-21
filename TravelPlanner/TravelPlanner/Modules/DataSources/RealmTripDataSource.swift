@@ -1,22 +1,21 @@
 //
-//  TripManager.swift
+//  RealmTripDataSource.swift
 //  TravelPlanner
 //
-//  Created by François Combe on 14/09/2019.
+//  Created by François Combe on 21/11/2019.
 //  Copyright © 2019 francois. All rights reserved.
 //
 
 import Foundation
-import GooglePlaces
 
-class TripManager {
+class RealmTripDataSource: TripDataSource {
     
-    static let shared = TripManager()
+    var allTrips: [Trip] = [] { didSet { contentDidChange?() } }
+    var contentDidChange: (() -> Void)?
     
-    var allTrips = [Trip]()
     var currentTrip: Trip?
     
-    func loadTrips() {
+    init() {
         let trip = createNewTrip()
         currentTrip = trip
     }
@@ -38,5 +37,4 @@ class TripManager {
         trip.places.append(place)
         completion(nil)
     }
-
 }

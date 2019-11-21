@@ -30,3 +30,22 @@ class GooglePlacesAPIManager {
         }
     }
 }
+
+extension GooglePlacesAPIManager: PlaceManager {
+    func getPlace(id: String, completion: @escaping (Result<Place?, Error>) -> Void) {
+        let fields = GMSPlaceField(rawValue: GMSPlaceField.all.rawValue)!
+        
+        placesClient.fetchPlace(fromPlaceID: id, placeFields: fields, sessionToken: nil) { (gmsPlace, error) in
+            if let error = error {
+                completion(.failure(error))
+            } else if let place = gmsPlace {
+                completion(.success(Place(from: place)))
+            } else {
+                let error = NSError.createError(message:  "An unknown error has been encountered while fetching the place.")
+                completion(.failure(error))
+            }
+        }
+    }
+    
+    
+}
