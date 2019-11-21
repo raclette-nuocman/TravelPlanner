@@ -9,6 +9,7 @@
 import UIKit
 import GoogleMaps
 import GooglePlaces
+import RealmSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,6 +20,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         initGooglePlaces()
         initRootCoordinator()
         return true
+    }
+    
+    private func initRealm() {
+        Realm.Configuration.defaultConfiguration = Realm.Configuration(schemaVersion: 1,
+                                                                       migrationBlock: nil)
     }
     
     private func initGooglePlaces() {
