@@ -16,6 +16,8 @@ class DetailCoordinator: Coordinator {
     weak var pulleyController: PulleyViewController?
     weak var navigationController: UINavigationController?
     
+    var tripDataSource = RealmTripDataSource()
+    
     init(in pulleyController: PulleyViewController, parent: Coordinator) {
         self.parent = parent
         self.pulleyController = pulleyController
@@ -23,9 +25,9 @@ class DetailCoordinator: Coordinator {
     }
     
     func start() {
-        let navigationController = UINavigationController()
+        let navigationController = NoBackTitleNavigationViewController()
         self.navigationController = navigationController
-        let controller = TripListTableViewController(dataSource: RealmTripDataSource()) { [weak self] in
+        let controller = TripListTableViewController(dataSource: tripDataSource) { [weak self] in
             guard let strongSelf = self else { return }
             strongSelf.parent?.removeChild(coordinator: strongSelf)
         }
@@ -37,7 +39,8 @@ class DetailCoordinator: Coordinator {
     }
     
     private func showDetail(for trip: Trip) {
-        
+        let controller = TripDetailTableViewController(dataSource: tripDataSource)
+        navigationController?.pushViewController(controller, animated: true)
     }
     
 }

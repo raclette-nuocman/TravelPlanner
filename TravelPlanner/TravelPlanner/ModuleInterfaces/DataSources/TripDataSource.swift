@@ -11,6 +11,7 @@ import Foundation
 protocol TripDataSource {
     
     var allTrips: [Trip] { get }
+    var currentTrip: Trip? { get set }
     var contentDidChange: (() -> Void)? { get set }
     
     func createNewTrip(with name: String?)

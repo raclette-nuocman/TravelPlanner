@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0F20739722F6F40F00BC7383 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F20739622F6F40F00BC7383 /* Config.swift */; };
-		0F76EB61232A837400E0DFDB /* DetailPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F76EB60232A837400E0DFDB /* DetailPlaceViewController.swift */; };
 		0F76EB63232AA2F300E0DFDB /* style.json in Resources */ = {isa = PBXBuildFile; fileRef = 0F76EB62232AA2F200E0DFDB /* style.json */; };
 		0F9E254A238703F7009852D7 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9E2549238703F7009852D7 /* Coordinator.swift */; };
 		0F9E254D2387041F009852D7 /* RootCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9E254C2387041F009852D7 /* RootCoordinator.swift */; };
@@ -23,6 +22,8 @@
 		0F9E256D23871AE9009852D7 /* TripListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9E256B23871AE9009852D7 /* TripListTableViewCell.swift */; };
 		0F9E256E23871AE9009852D7 /* TripListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F9E256C23871AE9009852D7 /* TripListTableViewCell.xib */; };
 		0FAFBF32238725E50029877C /* OptionalExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAFBF31238725E50029877C /* OptionalExtension.swift */; };
+		0FAFBF3E23872AC50029877C /* TripDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAFBF3D23872AC50029877C /* TripDetailTableViewController.swift */; };
+		0FAFBF4123872D9B0029877C /* NoBackTitleNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAFBF4023872D9B0029877C /* NoBackTitleNavigationViewController.swift */; };
 		0FB6981C2339306800248DD0 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB6981B2339306800248DD0 /* Place.swift */; };
 		0FCFC55822C145230082B924 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCFC55722C145230082B924 /* AppDelegate.swift */; };
 		0FCFC55F22C145230082B924 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FCFC55E22C145230082B924 /* Assets.xcassets */; };
@@ -32,16 +33,12 @@
 		0FD0A59B232CE98900305AF5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD0A599232CE98900305AF5 /* HomeViewController.swift */; };
 		0FD0A59D232CECA600305AF5 /* GooglePlacesAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD0A59C232CECA600305AF5 /* GooglePlacesAPIManager.swift */; };
 		0FD0A5A2232D120B00305AF5 /* ErrorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD0A5A1232D120B00305AF5 /* ErrorExtension.swift */; };
-		0FD0A5A4232D1DDB00305AF5 /* DetailTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD0A5A3232D1DDB00305AF5 /* DetailTripViewController.swift */; };
-		0FD0A5A6232D1E7000305AF5 /* TripPlacesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD0A5A5232D1E7000305AF5 /* TripPlacesTableViewController.swift */; };
-		0FD0A5AB232D44E800305AF5 /* PlaceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD0A5AA232D44E800305AF5 /* PlaceCell.swift */; };
 		0FDAEFB92349EE4000B3462A /* config.json in Resources */ = {isa = PBXBuildFile; fileRef = 0FDAEFB82349EE4000B3462A /* config.json */; };
 		3FD2141F90E1C6A884D91877 /* Pods_TravelPlanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A08E7C73B2F6450449901CA8 /* Pods_TravelPlanner.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0F20739622F6F40F00BC7383 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
-		0F76EB60232A837400E0DFDB /* DetailPlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPlaceViewController.swift; sourceTree = "<group>"; };
 		0F76EB62232AA2F200E0DFDB /* style.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = style.json; sourceTree = "<group>"; };
 		0F9E2549238703F7009852D7 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		0F9E254C2387041F009852D7 /* RootCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCoordinator.swift; sourceTree = "<group>"; };
@@ -56,6 +53,8 @@
 		0F9E256B23871AE9009852D7 /* TripListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripListTableViewCell.swift; sourceTree = "<group>"; };
 		0F9E256C23871AE9009852D7 /* TripListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TripListTableViewCell.xib; sourceTree = "<group>"; };
 		0FAFBF31238725E50029877C /* OptionalExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalExtension.swift; sourceTree = "<group>"; };
+		0FAFBF3D23872AC50029877C /* TripDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripDetailTableViewController.swift; sourceTree = "<group>"; };
+		0FAFBF4023872D9B0029877C /* NoBackTitleNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoBackTitleNavigationViewController.swift; sourceTree = "<group>"; };
 		0FB6981B2339306800248DD0 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		0FCFC55422C145230082B924 /* TravelPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FCFC55722C145230082B924 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -67,9 +66,6 @@
 		0FD0A599232CE98900305AF5 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		0FD0A59C232CECA600305AF5 /* GooglePlacesAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooglePlacesAPIManager.swift; sourceTree = "<group>"; };
 		0FD0A5A1232D120B00305AF5 /* ErrorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorExtension.swift; sourceTree = "<group>"; };
-		0FD0A5A3232D1DDB00305AF5 /* DetailTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTripViewController.swift; sourceTree = "<group>"; };
-		0FD0A5A5232D1E7000305AF5 /* TripPlacesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripPlacesTableViewController.swift; sourceTree = "<group>"; };
-		0FD0A5AA232D44E800305AF5 /* PlaceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceCell.swift; sourceTree = "<group>"; };
 		0FDAEFB82349EE4000B3462A /* config.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = config.json; sourceTree = "<group>"; };
 		4FE23B7CE0B7719510534FCC /* Pods-TravelPlanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelPlanner.debug.xcconfig"; path = "Target Support Files/Pods-TravelPlanner/Pods-TravelPlanner.debug.xcconfig"; sourceTree = "<group>"; };
 		8F14BCC645ECA21AF1750C56 /* Pods-TravelPlanner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelPlanner.release.xcconfig"; path = "Target Support Files/Pods-TravelPlanner/Pods-TravelPlanner.release.xcconfig"; sourceTree = "<group>"; };
@@ -118,10 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				0F9E256A23871AD2009852D7 /* Trip List */,
-				0FD0A5A3232D1DDB00305AF5 /* DetailTripViewController.swift */,
-				0FD0A5A5232D1E7000305AF5 /* TripPlacesTableViewController.swift */,
-				0F76EB60232A837400E0DFDB /* DetailPlaceViewController.swift */,
-				0FD0A5AA232D44E800305AF5 /* PlaceCell.swift */,
+				0FAFBF3F23872AC90029877C /* Trip Detail */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -141,6 +134,7 @@
 			children = (
 				0FD0A5A1232D120B00305AF5 /* ErrorExtension.swift */,
 				0FAFBF31238725E50029877C /* OptionalExtension.swift */,
+				0FAFBF4023872D9B0029877C /* NoBackTitleNavigationViewController.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -245,6 +239,14 @@
 				0FCFC55E22C145230082B924 /* Assets.xcassets */,
 			);
 			path = Appearance;
+			sourceTree = "<group>";
+		};
+		0FAFBF3F23872AC90029877C /* Trip Detail */ = {
+			isa = PBXGroup;
+			children = (
+				0FAFBF3D23872AC50029877C /* TripDetailTableViewController.swift */,
+			);
+			path = "Trip Detail";
 			sourceTree = "<group>";
 		};
 		0FCFC54B22C145230082B924 = {
@@ -465,11 +467,10 @@
 			files = (
 				0FD0A597232CE97900305AF5 /* MapViewController.swift in Sources */,
 				0F9E255723870E90009852D7 /* TripListTableViewController.swift in Sources */,
-				0FD0A5A6232D1E7000305AF5 /* TripPlacesTableViewController.swift in Sources */,
 				0FCFC55822C145230082B924 /* AppDelegate.swift in Sources */,
 				0FD0A59D232CECA600305AF5 /* GooglePlacesAPIManager.swift in Sources */,
 				0F9E256D23871AE9009852D7 /* TripListTableViewCell.swift in Sources */,
-				0FD0A5A4232D1DDB00305AF5 /* DetailTripViewController.swift in Sources */,
+				0FAFBF4123872D9B0029877C /* NoBackTitleNavigationViewController.swift in Sources */,
 				0FD0A59B232CE98900305AF5 /* HomeViewController.swift in Sources */,
 				0F9E256923871819009852D7 /* RealmTripDataSource.swift in Sources */,
 				0FD0A590232CE89100305AF5 /* Trip.swift in Sources */,
@@ -481,9 +482,8 @@
 				0FB6981C2339306800248DD0 /* Place.swift in Sources */,
 				0F9E255523870E02009852D7 /* DetailCoordinator.swift in Sources */,
 				0F9E255E238712C8009852D7 /* ModuleModel.swift in Sources */,
-				0FD0A5AB232D44E800305AF5 /* PlaceCell.swift in Sources */,
-				0F76EB61232A837400E0DFDB /* DetailPlaceViewController.swift in Sources */,
 				0FAFBF32238725E50029877C /* OptionalExtension.swift in Sources */,
+				0FAFBF3E23872AC50029877C /* TripDetailTableViewController.swift in Sources */,
 				0F9E254D2387041F009852D7 /* RootCoordinator.swift in Sources */,
 				0FD0A5A2232D120B00305AF5 /* ErrorExtension.swift in Sources */,
 				0F9E255123870545009852D7 /* HomeCoordinator.swift in Sources */,

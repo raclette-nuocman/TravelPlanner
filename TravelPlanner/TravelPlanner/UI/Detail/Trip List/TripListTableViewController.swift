@@ -61,6 +61,7 @@ class TripListTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let trip = dataSource.allTrips[indexPath.row]
+        dataSource.currentTrip = trip
         selectionBlock?(trip)
     }
 
