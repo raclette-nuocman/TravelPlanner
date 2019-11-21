@@ -24,6 +24,7 @@
 		0FAFBF32238725E50029877C /* OptionalExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAFBF31238725E50029877C /* OptionalExtension.swift */; };
 		0FAFBF3E23872AC50029877C /* TripDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAFBF3D23872AC50029877C /* TripDetailTableViewController.swift */; };
 		0FAFBF4123872D9B0029877C /* NoBackTitleNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAFBF4023872D9B0029877C /* NoBackTitleNavigationViewController.swift */; };
+		0FAFBF4423872F3C0029877C /* RTrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAFBF4323872F3C0029877C /* RTrip.swift */; };
 		0FB6981C2339306800248DD0 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB6981B2339306800248DD0 /* Place.swift */; };
 		0FCFC55822C145230082B924 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCFC55722C145230082B924 /* AppDelegate.swift */; };
 		0FCFC55F22C145230082B924 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FCFC55E22C145230082B924 /* Assets.xcassets */; };
@@ -55,6 +56,7 @@
 		0FAFBF31238725E50029877C /* OptionalExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalExtension.swift; sourceTree = "<group>"; };
 		0FAFBF3D23872AC50029877C /* TripDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripDetailTableViewController.swift; sourceTree = "<group>"; };
 		0FAFBF4023872D9B0029877C /* NoBackTitleNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoBackTitleNavigationViewController.swift; sourceTree = "<group>"; };
+		0FAFBF4323872F3C0029877C /* RTrip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTrip.swift; sourceTree = "<group>"; };
 		0FB6981B2339306800248DD0 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		0FCFC55422C145230082B924 /* TravelPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FCFC55722C145230082B924 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -208,13 +210,6 @@
 			path = Interfaces;
 			sourceTree = "<group>";
 		};
-		0F9E256423871661009852D7 /* APIModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = APIModel;
-			sourceTree = "<group>";
-		};
 		0F9E256723871801009852D7 /* DataSources */ = {
 			isa = PBXGroup;
 			children = (
@@ -247,6 +242,14 @@
 				0FAFBF3D23872AC50029877C /* TripDetailTableViewController.swift */,
 			);
 			path = "Trip Detail";
+			sourceTree = "<group>";
+		};
+		0FAFBF4223872F310029877C /* APIModel */ = {
+			isa = PBXGroup;
+			children = (
+				0FAFBF4323872F3C0029877C /* RTrip.swift */,
+			);
+			path = APIModel;
 			sourceTree = "<group>";
 		};
 		0FCFC54B22C145230082B924 = {
@@ -306,8 +309,8 @@
 		0FD0A59E232CECB200305AF5 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				0FAFBF4223872F310029877C /* APIModel */,
 				0F9E256723871801009852D7 /* DataSources */,
-				0F9E256423871661009852D7 /* APIModel */,
 				0FD0A59C232CECA600305AF5 /* GooglePlacesAPIManager.swift */,
 			);
 			path = Modules;
@@ -472,6 +475,7 @@
 				0F9E256D23871AE9009852D7 /* TripListTableViewCell.swift in Sources */,
 				0FAFBF4123872D9B0029877C /* NoBackTitleNavigationViewController.swift in Sources */,
 				0FD0A59B232CE98900305AF5 /* HomeViewController.swift in Sources */,
+				0FAFBF4423872F3C0029877C /* RTrip.swift in Sources */,
 				0F9E256923871819009852D7 /* RealmTripDataSource.swift in Sources */,
 				0FD0A590232CE89100305AF5 /* Trip.swift in Sources */,
 				0F9E255323870A33009852D7 /* MapCoordinator.swift in Sources */,

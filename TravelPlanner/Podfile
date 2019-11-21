@@ -9,5 +9,6 @@ target 'TravelPlanner' do
   pod 'Pulley'
   pod 'GoogleMaps'
   pod 'GooglePlaces'
+  pod 'RealmSwift'
 
 end
