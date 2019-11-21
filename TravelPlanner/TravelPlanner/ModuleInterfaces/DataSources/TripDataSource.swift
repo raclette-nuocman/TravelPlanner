@@ -13,5 +13,5 @@ protocol TripDataSource {
     var allTrips: [Trip] { get }
     var contentDidChange: (() -> Void)? { get set }
     
-    func createNewTrip() -> Trip
+    func createNewTrip(with name: String?)
 }

@@ -24,11 +24,44 @@ class TripListTableViewController: UITableViewController {
         deinitBlock?()
     }
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         registerCells()
+        initNavigationBar()
+        initTableView()
+        
+        self.dataSource.contentDidChange = { [weak self] in
+            self?.tableView.reloadData()
+        }
+    }
+    
+    private func initTableView() {
+        tableView.tableFooterView = UIView(frame: .zero)
+    }
+    
+    private func initNavigationBar() {
         title = "Your trips"
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "plus.circle"), style: .plain, target: self, action: #selector(createButtonHasBeenPressed))
+    }
+    
+    // MARK: - Actions
+    
+    @objc private func createButtonHasBeenPressed() {
+        let creationAlertController = UIAlertController(title: "Create a new Trip", message: nil, preferredStyle: .alert)
+        creationAlertController.addTextField { (textField) in
+            textField.placeholder = "Enter the Trip name"
+        }
+        creationAlertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        creationAlertController.addAction(UIAlertAction(title: "Ok", style: .default, handler: { [weak self] _ in
+            let name = creationAlertController.textFields?[0].text
+            self?.dataSource.createNewTrip(with: name)
+        }))
+        present(creationAlertController, animated: true, completion: nil)
+    }
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let trip = dataSource.allTrips[indexPath.row]
+        selectionBlock?(trip)
     }
 
     // MARK: - Table view data source
@@ -51,9 +84,5 @@ class TripListTableViewController: UITableViewController {
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let trip = dataSource.allTrips[indexPath.row]
-        selectionBlock?(trip)
-    }
 
 }

@@ -17,24 +17,24 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IVZ-Pt-1zd">
-                        <rect key="frame" x="15" y="5" width="285" height="34"/>
+                        <rect key="frame" x="15" y="10" width="285" height="24"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="IVZ-Pt-1zd" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="MB4-Sj-2qg"/>
+                    <constraint firstItem="IVZ-Pt-1zd" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="MB4-Sj-2qg"/>
                     <constraint firstItem="IVZ-Pt-1zd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="lgG-zJ-xfZ"/>
                     <constraint firstAttribute="trailing" secondItem="IVZ-Pt-1zd" secondAttribute="trailing" constant="20" id="uv0-Xt-FrK"/>
-                    <constraint firstAttribute="bottom" secondItem="IVZ-Pt-1zd" secondAttribute="bottom" constant="5" id="wZI-tA-YwM"/>
+                    <constraint firstAttribute="bottom" secondItem="IVZ-Pt-1zd" secondAttribute="bottom" constant="10" id="wZI-tA-YwM"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="tripNameLabel" destination="IVZ-Pt-1zd" id="ZAx-5Y-Cf7"/>
             </connections>
-            <point key="canvasLocation" x="139" y="153"/>
+            <point key="canvasLocation" x="137.68115942028987" y="152.67857142857142"/>
         </tableViewCell>
     </objects>
 </document>

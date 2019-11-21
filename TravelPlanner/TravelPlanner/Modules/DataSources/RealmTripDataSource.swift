@@ -16,16 +16,14 @@ class RealmTripDataSource: TripDataSource {
     var currentTrip: Trip?
     
     init() {
-        let trip = createNewTrip()
-        currentTrip = trip
+        createNewTrip(with: nil)
     }
     
-    func createNewTrip() -> Trip {
+    func createNewTrip(with name: String?) {
         let newTrip = Trip()
         newTrip.id = UUID().uuidString.lowercased()
-        newTrip.name = "My trip"
+        newTrip.name = name.nilOrEmpty() ?? "My trip \(allTrips.count)"
         allTrips.append(newTrip)
-        return newTrip
     }
     
     func addPlaceToTrip(place: Place, trip: Trip, completion: @escaping (Error?) -> Void) {

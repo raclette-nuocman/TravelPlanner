@@ -22,6 +22,7 @@
 		0F9E256923871819009852D7 /* RealmTripDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9E256823871819009852D7 /* RealmTripDataSource.swift */; };
 		0F9E256D23871AE9009852D7 /* TripListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9E256B23871AE9009852D7 /* TripListTableViewCell.swift */; };
 		0F9E256E23871AE9009852D7 /* TripListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F9E256C23871AE9009852D7 /* TripListTableViewCell.xib */; };
+		0FAFBF32238725E50029877C /* OptionalExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAFBF31238725E50029877C /* OptionalExtension.swift */; };
 		0FB6981C2339306800248DD0 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB6981B2339306800248DD0 /* Place.swift */; };
 		0FCFC55822C145230082B924 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCFC55722C145230082B924 /* AppDelegate.swift */; };
 		0FCFC55F22C145230082B924 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FCFC55E22C145230082B924 /* Assets.xcassets */; };
@@ -54,6 +55,7 @@
 		0F9E256823871819009852D7 /* RealmTripDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmTripDataSource.swift; sourceTree = "<group>"; };
 		0F9E256B23871AE9009852D7 /* TripListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripListTableViewCell.swift; sourceTree = "<group>"; };
 		0F9E256C23871AE9009852D7 /* TripListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TripListTableViewCell.xib; sourceTree = "<group>"; };
+		0FAFBF31238725E50029877C /* OptionalExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalExtension.swift; sourceTree = "<group>"; };
 		0FB6981B2339306800248DD0 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		0FCFC55422C145230082B924 /* TravelPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FCFC55722C145230082B924 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				0FD0A5A1232D120B00305AF5 /* ErrorExtension.swift */,
+				0FAFBF31238725E50029877C /* OptionalExtension.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -236,6 +239,14 @@
 			path = "Trip List";
 			sourceTree = "<group>";
 		};
+		0FAFBF3023871FB00029877C /* Appearance */ = {
+			isa = PBXGroup;
+			children = (
+				0FCFC55E22C145230082B924 /* Assets.xcassets */,
+			);
+			path = Appearance;
+			sourceTree = "<group>";
+		};
 		0FCFC54B22C145230082B924 = {
 			isa = PBXGroup;
 			children = (
@@ -259,6 +270,7 @@
 			children = (
 				0F9E254623870382009852D7 /* Application */,
 				0F9E254B238703FF009852D7 /* Coordinators */,
+				0FAFBF3023871FB00029877C /* Appearance */,
 				0FD0A58C232CE81200305AF5 /* UI */,
 				0FD0A591232CE8BF00305AF5 /* Model */,
 				0F9E255823871042009852D7 /* ModuleInterfaces */,
@@ -276,7 +288,6 @@
 				0F76EB5D232A7F7A00E0DFDB /* Detail */,
 				0F76EB4F232A704E00E0DFDB /* Map */,
 				0F76EB5A232A7F1300E0DFDB /* Pulley */,
-				0FCFC55E22C145230082B924 /* Assets.xcassets */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -472,6 +483,7 @@
 				0F9E255E238712C8009852D7 /* ModuleModel.swift in Sources */,
 				0FD0A5AB232D44E800305AF5 /* PlaceCell.swift in Sources */,
 				0F76EB61232A837400E0DFDB /* DetailPlaceViewController.swift in Sources */,
+				0FAFBF32238725E50029877C /* OptionalExtension.swift in Sources */,
 				0F9E254D2387041F009852D7 /* RootCoordinator.swift in Sources */,
 				0FD0A5A2232D120B00305AF5 /* ErrorExtension.swift in Sources */,
 				0F9E255123870545009852D7 /* HomeCoordinator.swift in Sources */,
