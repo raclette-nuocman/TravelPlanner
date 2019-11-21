@@ -17,14 +17,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let rootCoordinator: RootCoordinator = RootCoordinator()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        initRealm()
         initGooglePlaces()
         initRootCoordinator()
         return true
     }
     
     private func initRealm() {
-        Realm.Configuration.defaultConfiguration = Realm.Configuration(schemaVersion: 1,
-                                                                       migrationBlock: nil)
+        Realm.Configuration.defaultConfiguration = Realm.Configuration(schemaVersion: 2,
+                                                                       migrationBlock: { _, _ in
+                                                                        print("Migration complete")
+        })
     }
     
     private func initGooglePlaces() {

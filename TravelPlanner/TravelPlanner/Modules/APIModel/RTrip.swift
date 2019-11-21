@@ -12,6 +12,7 @@ import RealmSwift
 final class RTrip: Object {
     @objc dynamic var id: String!
     @objc dynamic var name: String?
+    @objc dynamic var category: String?
     var places: List<RPlace> = List<RPlace>()
 }
 
@@ -23,6 +24,7 @@ extension RTrip: ModuleModel {
         let trip = Trip()
         trip.id = self.id
         trip.name = self.name
+        trip.category = Trip.Category(rawValue: category ?? "")
         return trip
     }
     
@@ -30,6 +32,7 @@ extension RTrip: ModuleModel {
         let trip = RTrip()
         trip.id = appModel.id
         trip.name = appModel.name
+        trip.category = appModel.category?.rawValue
         trip.places.append(objectsIn: appModel.places.compactMap { RPlace.from(appModel: $0) })
         return trip
     }

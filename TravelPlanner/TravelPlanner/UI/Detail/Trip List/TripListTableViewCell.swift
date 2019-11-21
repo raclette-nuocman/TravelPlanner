@@ -13,9 +13,11 @@ class TripListTableViewCell: UITableViewCell {
     static var identifier = "TripListTableViewCell"
 
     @IBOutlet var tripNameLabel: UILabel!
-
+    @IBOutlet var iconImage: UIImageView!
+    
     func setup(with trip: Trip) {
         tripNameLabel.text = trip.name
+        iconImage.image = trip.category?.icon
     }
     
     

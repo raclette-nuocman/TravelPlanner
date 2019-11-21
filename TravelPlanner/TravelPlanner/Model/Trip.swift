@@ -13,5 +13,20 @@ class Trip {
     
     var id: String!
     var name: String?
+    var category: Category?
     var places = [Place]()
+    
+    enum Category: String {
+        case city = "city"
+        case roadTrip = "roadTrip"
+        case cruise = "cruise"
+        
+        var icon: UIImage? {
+            return UIImage(named: rawValue)
+        }
+        
+        static func getAll() -> [Trip.Category] {
+            [city, roadTrip, cruise]
+        }
+    }
 }

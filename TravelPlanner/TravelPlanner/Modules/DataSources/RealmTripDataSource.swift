@@ -22,6 +22,7 @@ class RealmTripDataSource: TripDataSource {
     init() {
         let realm = try! Realm()
         self.currentRTrips = realm.objects(RTrip.self)
+        self.allTrips = currentRTrips.compactMap { $0.toAppModel() }
         setupSynchronization()
     }
     
@@ -59,6 +60,7 @@ class RealmTripDataSource: TripDataSource {
         let newTrip = Trip()
         newTrip.id = UUID().uuidString.lowercased()
         newTrip.name = name.nilOrEmpty() ?? "My trip \(allTrips.count)"
+        newTrip.category = Trip.Category.getAll().shuffled().first!
         
         guard let newObject = RTrip.from(appModel: newTrip) else { return }
         updateAndSync(trip: newObject)
