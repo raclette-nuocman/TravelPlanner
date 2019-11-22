@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		0F20739722F6F40F00BC7383 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F20739622F6F40F00BC7383 /* Config.swift */; };
+		0F4B737E2387510200645A5D /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4B737D2387510200645A5D /* UIColorExtension.swift */; };
+		0F4B73832387B66200645A5D /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 0F4B73822387B66200645A5D /* swiftgen.yml */; };
+		0F4B73862387B85300645A5D /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4B73852387B85300645A5D /* Assets.swift */; };
+		0F4B73A9238846CC00645A5D /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F4B73A8238846CC00645A5D /* Colors.xcassets */; };
 		0F76EB63232AA2F300E0DFDB /* style.json in Resources */ = {isa = PBXBuildFile; fileRef = 0F76EB62232AA2F200E0DFDB /* style.json */; };
 		0F9E254A238703F7009852D7 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9E2549238703F7009852D7 /* Coordinator.swift */; };
 		0F9E254D2387041F009852D7 /* RootCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9E254C2387041F009852D7 /* RootCoordinator.swift */; };
@@ -28,7 +32,7 @@
 		0FAFBF4623872FFA0029877C /* RPlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAFBF4523872FFA0029877C /* RPlace.swift */; };
 		0FB6981C2339306800248DD0 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB6981B2339306800248DD0 /* Place.swift */; };
 		0FCFC55822C145230082B924 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCFC55722C145230082B924 /* AppDelegate.swift */; };
-		0FCFC55F22C145230082B924 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FCFC55E22C145230082B924 /* Assets.xcassets */; };
+		0FCFC55F22C145230082B924 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FCFC55E22C145230082B924 /* Images.xcassets */; };
 		0FCFC56222C145230082B924 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FCFC56022C145230082B924 /* LaunchScreen.storyboard */; };
 		0FD0A590232CE89100305AF5 /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD0A58F232CE89100305AF5 /* Trip.swift */; };
 		0FD0A597232CE97900305AF5 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD0A596232CE97900305AF5 /* MapViewController.swift */; };
@@ -41,6 +45,10 @@
 
 /* Begin PBXFileReference section */
 		0F20739622F6F40F00BC7383 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		0F4B737D2387510200645A5D /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		0F4B73822387B66200645A5D /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = SOURCE_ROOT; };
+		0F4B73852387B85300645A5D /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
+		0F4B73A8238846CC00645A5D /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		0F76EB62232AA2F200E0DFDB /* style.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = style.json; sourceTree = "<group>"; };
 		0F9E2549238703F7009852D7 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		0F9E254C2387041F009852D7 /* RootCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCoordinator.swift; sourceTree = "<group>"; };
@@ -62,7 +70,7 @@
 		0FB6981B2339306800248DD0 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		0FCFC55422C145230082B924 /* TravelPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FCFC55722C145230082B924 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0FCFC55E22C145230082B924 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0FCFC55E22C145230082B924 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0FCFC56122C145230082B924 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0FCFC56322C145230082B924 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0FD0A58F232CE89100305AF5 /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
@@ -93,9 +101,16 @@
 			children = (
 				0FDAEFB82349EE4000B3462A /* config.json */,
 				0F20739622F6F40F00BC7383 /* Config.swift */,
-				0F76EB62232AA2F200E0DFDB /* style.json */,
 			);
 			path = Config;
+			sourceTree = "<group>";
+		};
+		0F4B73812387B5C200645A5D /* Swiftgen */ = {
+			isa = PBXGroup;
+			children = (
+				0F4B73822387B66200645A5D /* swiftgen.yml */,
+			);
+			path = Swiftgen;
 			sourceTree = "<group>";
 		};
 		0F76EB4F232A704E00E0DFDB /* Map */ = {
@@ -139,15 +154,19 @@
 				0FD0A5A1232D120B00305AF5 /* ErrorExtension.swift */,
 				0FAFBF31238725E50029877C /* OptionalExtension.swift */,
 				0FAFBF4023872D9B0029877C /* NoBackTitleNavigationViewController.swift */,
+				0F4B737D2387510200645A5D /* UIColorExtension.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		0F9E2548238703DC009852D7 /* Ressources */ = {
+		0F9E2548238703DC009852D7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				0F4B73852387B85300645A5D /* Assets.swift */,
+				0FCFC55E22C145230082B924 /* Images.xcassets */,
+				0F4B73A8238846CC00645A5D /* Colors.xcassets */,
 			);
-			path = Ressources;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		0F9E254B238703FF009852D7 /* Coordinators */ = {
@@ -233,7 +252,7 @@
 		0FAFBF3023871FB00029877C /* Appearance */ = {
 			isa = PBXGroup;
 			children = (
-				0FCFC55E22C145230082B924 /* Assets.xcassets */,
+				0F76EB62232AA2F200E0DFDB /* style.json */,
 			);
 			path = Appearance;
 			sourceTree = "<group>";
@@ -259,6 +278,7 @@
 			isa = PBXGroup;
 			children = (
 				0FCFC55622C145230082B924 /* TravelPlanner */,
+				0F4B73812387B5C200645A5D /* Swiftgen */,
 				0FCFC55522C145230082B924 /* Products */,
 				3C78FC7E07FD16CB03F4BDF0 /* Pods */,
 				763A140CF539C1403ABF3720 /* Frameworks */,
@@ -285,7 +305,7 @@
 				0FD0A59E232CECB200305AF5 /* Modules */,
 				0F9E2547238703A5009852D7 /* Utils */,
 				0FCFC56322C145230082B924 /* Info.plist */,
-				0F9E2548238703DC009852D7 /* Ressources */,
+				0F9E2548238703DC009852D7 /* Resources */,
 			);
 			path = TravelPlanner;
 			sourceTree = "<group>";
@@ -344,6 +364,7 @@
 			buildConfigurationList = 0FCFC56622C145230082B924 /* Build configuration list for PBXNativeTarget "TravelPlanner" */;
 			buildPhases = (
 				B399879D30C10239AA6F9B74 /* [CP] Check Pods Manifest.lock */,
+				0F4B73842387B67100645A5D /* Swiftgen script */,
 				0FCFC55022C145230082B924 /* Sources */,
 				0FCFC55122C145230082B924 /* Frameworks */,
 				0FCFC55222C145230082B924 /* Resources */,
@@ -401,13 +422,33 @@
 				0FDAEFB92349EE4000B3462A /* config.json in Resources */,
 				0F9E256E23871AE9009852D7 /* TripListTableViewCell.xib in Resources */,
 				0F76EB63232AA2F300E0DFDB /* style.json in Resources */,
-				0FCFC55F22C145230082B924 /* Assets.xcassets in Resources */,
+				0FCFC55F22C145230082B924 /* Images.xcassets in Resources */,
+				0F4B73832387B66200645A5D /* swiftgen.yml in Resources */,
+				0F4B73A9238846CC00645A5D /* Colors.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0F4B73842387B67100645A5D /* Swiftgen script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Swiftgen script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "swiftgen\n\n";
+		};
 		39AAE3E5D6CDF6D20E4B94D7 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -488,6 +529,7 @@
 				0FAFBF4623872FFA0029877C /* RPlace.swift in Sources */,
 				0F20739722F6F40F00BC7383 /* Config.swift in Sources */,
 				0FB6981C2339306800248DD0 /* Place.swift in Sources */,
+				0F4B737E2387510200645A5D /* UIColorExtension.swift in Sources */,
 				0F9E255523870E02009852D7 /* DetailCoordinator.swift in Sources */,
 				0F9E255E238712C8009852D7 /* ModuleModel.swift in Sources */,
 				0FAFBF32238725E50029877C /* OptionalExtension.swift in Sources */,
@@ -495,6 +537,7 @@
 				0F9E254D2387041F009852D7 /* RootCoordinator.swift in Sources */,
 				0FD0A5A2232D120B00305AF5 /* ErrorExtension.swift in Sources */,
 				0F9E255123870545009852D7 /* HomeCoordinator.swift in Sources */,
+				0F4B73862387B85300645A5D /* Assets.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

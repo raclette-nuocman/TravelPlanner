@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import SFSafeSymbols
 
 class TripListTableViewController: UITableViewController {
 
+    var gradient: CAGradientLayer?
+    
     private var dataSource: TripDataSource!
     
     var deinitBlock: (() -> Void)?
@@ -27,21 +30,29 @@ class TripListTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         registerCells()
-        initNavigationBar()
         initTableView()
-        
         self.dataSource.contentDidChange = { [weak self] in
             self?.tableView.reloadData()
         }
+        initNavigationBar()
     }
     
     private func initTableView() {
         tableView.tableFooterView = UIView(frame: .zero)
+        tableView.backgroundColor = .clear
+        tableView.separatorStyle = .none
     }
     
     private func initNavigationBar() {
         title = "Your trips"
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "plus.circle"), style: .plain, target: self, action: #selector(createButtonHasBeenPressed))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemSymbol: .plusCircle), style: .plain, target: self, action: #selector(createButtonHasBeenPressed))
+
+        navigationController?.navigationBar.shadowImage = UIImage()
+    }
+        
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        gradient?.frame = view.bounds
     }
     
     // MARK: - Actions

@@ -17,34 +17,47 @@
                 <rect key="frame" x="0.0" y="0.0" width="412" height="73"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="hi9-BD-YHE">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K35-QM-dly">
                         <rect key="frame" x="15" y="8" width="377" height="57"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Nwg-MM-UTI">
-                                <rect key="frame" x="0.0" y="8.5" width="40" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="g27-xN-WOE"/>
-                                    <constraint firstAttribute="width" secondItem="Nwg-MM-UTI" secondAttribute="height" multiplier="1:1" id="wsy-6a-Vlb"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IVZ-Pt-1zd">
-                                <rect key="frame" x="48" y="18.5" width="329" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="hi9-BD-YHE">
+                                <rect key="frame" x="15" y="8" width="347" height="41"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Nwg-MM-UTI">
+                                        <rect key="frame" x="0.0" y="0.5" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="g27-xN-WOE"/>
+                                            <constraint firstAttribute="width" secondItem="Nwg-MM-UTI" secondAttribute="height" multiplier="1:1" id="wsy-6a-Vlb"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IVZ-Pt-1zd">
+                                        <rect key="frame" x="48" y="10.5" width="299" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
-                    </stackView>
+                        <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hi9-BD-YHE" firstAttribute="leading" secondItem="K35-QM-dly" secondAttribute="leading" constant="15" id="DwA-AN-a1j"/>
+                            <constraint firstItem="hi9-BD-YHE" firstAttribute="top" secondItem="K35-QM-dly" secondAttribute="top" constant="8" id="Nfc-v4-Pph"/>
+                            <constraint firstAttribute="bottom" secondItem="hi9-BD-YHE" secondAttribute="bottom" constant="8" id="brx-ol-IQW"/>
+                            <constraint firstAttribute="trailing" secondItem="hi9-BD-YHE" secondAttribute="trailing" constant="15" id="iZz-LU-BiM"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="hi9-BD-YHE" secondAttribute="trailing" constant="20" id="3QO-VU-qSl"/>
-                    <constraint firstAttribute="bottom" secondItem="hi9-BD-YHE" secondAttribute="bottom" constant="8" id="FEu-6n-E9J"/>
-                    <constraint firstItem="hi9-BD-YHE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="HnF-lk-NEZ"/>
-                    <constraint firstItem="hi9-BD-YHE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="SH7-A6-5bD"/>
+                    <constraint firstAttribute="bottom" secondItem="K35-QM-dly" secondAttribute="bottom" constant="8" id="Raa-Yt-wBA"/>
+                    <constraint firstItem="K35-QM-dly" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="hS7-Pr-3FM"/>
+                    <constraint firstAttribute="trailing" secondItem="K35-QM-dly" secondAttribute="trailing" constant="20" id="pX7-4L-e4n"/>
+                    <constraint firstItem="K35-QM-dly" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="qM3-Pf-M4M"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="cardView" destination="K35-QM-dly" id="tTj-fW-lCq"/>
                 <outlet property="iconImage" destination="Nwg-MM-UTI" id="shq-iT-2FV"/>
                 <outlet property="tripNameLabel" destination="IVZ-Pt-1zd" id="ZAx-5Y-Cf7"/>
             </connections>

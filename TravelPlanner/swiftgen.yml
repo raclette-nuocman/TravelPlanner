@@ -1,0 +1,12 @@
+#strings:
+#  inputs: TravelPlanner/Resources/Strings/en.lproj/Localizable.strings
+#  outputs:
+#    - templateName: structured-swift4
+#      output: WelcomePlus/Resources/Strings/Strings.swift
+xcassets:
+  inputs:
+    - TravelPlanner/Resources/Images.xcassets
+    - TravelPlanner/Resources/Colors.xcassets
+  outputs:
+    - templateName: swift4
+      output: TravelPlanner/Resources/Assets.swift

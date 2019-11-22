@@ -12,12 +12,14 @@ PODS:
   - Realm/Headers (3.19.0)
   - RealmSwift (3.19.0):
     - Realm (= 3.19.0)
+  - SFSafeSymbols (1.0.1)
 
 DEPENDENCIES:
   - GoogleMaps
   - GooglePlaces
   - Pulley
   - RealmSwift
+  - SFSafeSymbols (~> 1.0.1)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -27,6 +29,7 @@ SPEC REPOS:
     - Pulley
     - Realm
     - RealmSwift
+    - SFSafeSymbols
 
 SPEC CHECKSUMS:
   GoogleMaps: 5c13302e6fe6bb6e686b267196586b91cd594225
@@ -34,7 +37,8 @@ SPEC CHECKSUMS:
   Pulley: 81301031e9b08c7b240fa47e8b5d76e00bb05530
   Realm: 995d585bcf699aaff226715886c849a29dd3d07f
   RealmSwift: 35f284a537989f2187b413e5917091948cb87a3f
+  SFSafeSymbols: 5b35657e1d57079cd56504b5075cc5167d587f36
 
-PODFILE CHECKSUM: 5230750fe88c8c7d9d76182fff9cc8b665f3be5f
+PODFILE CHECKSUM: 47224024cc100ae3ac5b4a6f4316e1afd153359a
 
 COCOAPODS: 1.8.3

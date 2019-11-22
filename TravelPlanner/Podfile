@@ -10,5 +10,6 @@ target 'TravelPlanner' do
   pod 'GoogleMaps'
   pod 'GooglePlaces'
   pod 'RealmSwift'
+  pod 'SFSafeSymbols', '~> 1.0.1'
 
 end

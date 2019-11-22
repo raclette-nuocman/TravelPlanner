@@ -27,6 +27,7 @@ extension RTrip: ModuleModel {
         trip.category = Trip.Category(rawValue: category ?? "")
         return trip
     }
+
     
     static func from(appModel: Trip) -> RTrip? {
         let trip = RTrip()

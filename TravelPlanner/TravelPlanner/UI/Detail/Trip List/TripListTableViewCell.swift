@@ -14,6 +14,14 @@ class TripListTableViewCell: UITableViewCell {
 
     @IBOutlet var tripNameLabel: UILabel!
     @IBOutlet var iconImage: UIImageView!
+    @IBOutlet var cardView: UIView!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        backgroundColor = .clear
+        cardView.layer.cornerRadius = 10
+        cardView.backgroundColor = Asset.Colors.pulleyCellBackGround.color
+    }
     
     func setup(with trip: Trip) {
         tripNameLabel.text = trip.name

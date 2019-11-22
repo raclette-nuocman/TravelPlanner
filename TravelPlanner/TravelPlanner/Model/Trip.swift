@@ -17,16 +17,32 @@ class Trip {
     var places = [Place]()
     
     enum Category: String {
-        case city = "city"
-        case roadTrip = "roadTrip"
-        case cruise = "cruise"
+        case museum
+        case roadTrip
+        case cruise
+        case backpacker
+        case moutain
+        case beach
         
         var icon: UIImage? {
-            return UIImage(named: rawValue)
+            switch self {
+            case .museum:
+                return Asset.Images.museum.image
+            case .roadTrip:
+                return Asset.Images.van.image
+            case .cruise:
+                return Asset.Images.cruise.image
+            case .backpacker:
+                return Asset.Images.backpacker.image
+            case .moutain:
+                return Asset.Images.mountain.image
+            case .beach:
+                return Asset.Images.beach.image
+            }
         }
         
         static func getAll() -> [Trip.Category] {
-            [city, roadTrip, cruise]
+            [museum, roadTrip, cruise, backpacker, moutain, beach]
         }
     }
 }

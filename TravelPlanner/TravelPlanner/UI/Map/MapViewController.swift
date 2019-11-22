@@ -59,12 +59,21 @@ class MapViewController: UIViewController {
         mapView.settings.myLocationButton = true
         mapView.delegate = self
         view = mapView
+        loadMapStyle()
     }
     
     private func loadMapStyle() {
-        if let styleURL = Bundle.main.url(forResource: "style", withExtension: "json") {
-            mapView?.mapStyle = try! GMSMapStyle(contentsOfFileURL: styleURL)
+        if traitCollection.userInterfaceStyle == .dark {
+            if let styleURL = Bundle.main.url(forResource: "style", withExtension: "json") {
+                mapView?.mapStyle = try! GMSMapStyle(contentsOfFileURL: styleURL)
+            }
+        } else {
+            mapView?.mapStyle = nil
         }
+    }
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        loadMapStyle()
     }
 
     private func initLocationAuthorization() {
